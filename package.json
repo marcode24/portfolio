@@ -40,12 +40,10 @@
   },
   "lint-staged": {
     "*.{astro,css,js,jsx,ts,tsx}": [
-      "npm run lint:fix",
-      "git add"
+      "npm run lint:fix"
     ],
     "**/*ts?(x)": [
-      "npm run build-types",
-      "git add"
+      "npm run build-types"
     ]
   }
 }
