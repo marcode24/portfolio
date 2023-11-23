@@ -1,6 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Welcome to Astro.';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -59,13 +61,12 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <style>
-	.c {}
 	main {
 		margin: auto;
 		padding: 1rem;
 		width: 800px;
 		max-width: calc(100% - 2rem);
-		color: white;
+		color: #fff;
 		font-size: 20px;
 		line-height: 1.6;
 	}
@@ -80,7 +81,7 @@ import Card from '../components/Card.astro';
 	}
 	h1 {
 		font-size: 4rem;
-		font-weight: 700;
+		font-weight: bold;
 		line-height: 1;
 		text-align: center;
 		margin-bottom: 1em;
