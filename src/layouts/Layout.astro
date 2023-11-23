@@ -13,6 +13,10 @@ const { title } = Astro.props;
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link href="https://fonts.googleapis.com/css2?family=Redressed&family=Yellowtail&display=swap" rel="stylesheet">
+		<link
+			href="https://fonts.googleapis.com/css2?family=Redressed&family=Space+Grotesk:wght@300;400;500;600;700&family=Yellowtail&display=swap"
+			rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -21,31 +25,124 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			#fff 60%
-		);
+		--bg-color: #f7f7f7;
+		--bg-color-2: #3b82f6a3;
+		--bg-color-scroll: #aaaaaa;
+		--font-color: #111827;
+		--primary-color: #3b82f6;
+		--second-color: #1f2937;
+		--third-color: #e7e9ea;
+		--bg-color-button: #e6e6ee;
+		--bg-color-button-hover: #dcdcdc;
+		--bg-color-tooltip: #fff;
+		--bg-dark3: #4b5563;
+		--border-color: #d1d5db;
+		--border-color-nav: #cbcbcb;
+		--bg-color-badge: #1f2937;
+		--text-shadow-color: #000000;
 	}
+
+	body {
+		color: var(--font-color);
+		transition: 0.7s;
+		-webkit-transition: 0.7s;
+		-moz-transition: 0.7s;
+		-o-transition: 0.7s;
+		background-color: var(--bg-color);
+	}
+
+	body.dark {
+		--bg-color: #111827;
+		--bg-color-2: #3b82f6;
+		--font-color: #f7f7f7;
+		--border-color-nav: #374151;
+		--bg-color-button: #1f2937;
+		--bg-color-button-hover: #2d3949;
+		--bg-dark3: #d1d5db;
+		--bg-color-tooltip: var(--bg-color-button);
+		--bg-color-badge: #4b5563;
+	}
+
+	::-webkit-scrollbar {
+		width: 6px;
+		background-color: var(--bg-color);
+	}
+
+	::-webkit-scrollbar-track {
+		background-color: var(--bg-color);
+	}
+
+	::-webkit-scrollbar-thumb {
+		background-color: var(--bg-color-scroll);
+		border-radius: 1rem;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--bg-color-scroll);
+		box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+	}
+
+	::-webkit-scrollbar-thumb:active {
+		background: var(--bg-color-scroll);
+	}
+
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		scroll-behavior: smooth;
+		font-family: "Space Grotesk", sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	button,
+	a.btn {
+		font-family: inherit;
+		border-radius: 8px;
+		border: none;
+		background-color: var(--primary-color);
+		color: #ffffff;
+		padding: 12px 16px;
+		font-size: 20px;
+		cursor: pointer;
+		min-width: 64px;
+		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+		transition: 0.25s;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	button:hover,
+	a.btn:hover {
+		box-shadow: 0 0.5em 0.5em -0.4em var(--bg-dark3);
+		transform: translateY(-0.25em);
+	}
+
+	section {
+		width: 100%;
+		padding: 2rem 0;
+	}
+
+	section > .title {
+		font-weight: bold;
+		font-size: 52px;
+		margin: 1rem 0;
+		align-self: flex-start;
+	}
+
+	@media (max-width: 900px) {
+		h1.title,
+		.title {
+			font-size: 46px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		section > .title {
+			font-size: 38px;
+		}
 	}
 </style>
