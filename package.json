@@ -31,9 +31,21 @@
     "eslint-plugin-import": "^2.29.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "stylelint": "^15.11.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^34.0.0",
     "stylelint-config-standard-scss": "^11.1.0"
+  },
+  "lint-staged": {
+    "*.{astro,css,js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "**/*ts?(x)": [
+      "npm run build-types",
+      "git add"
+    ]
   }
 }
