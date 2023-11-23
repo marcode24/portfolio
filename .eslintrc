@@ -1,0 +1,100 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb-base"],
+  "plugins": ["import"],
+  "rules": {
+    "max-len": [
+      "error",
+      {
+        "code": 100
+      }
+    ],
+    "linebreak-style": "off",
+    "no-plusplus": "off",
+    "no-param-reassign": "off",
+    "no-unused-expressions": "off",
+    "no-return-assign": "off",
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-tabs": "off",
+    "semi": ["error", "always"],
+    "space-before-blocks": "error",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1,
+        "maxBOF": 0
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "ignorePackages",
+        "jsx": "never"
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.astro"],
+      "plugins": [
+        "@typescript-eslint",
+        "unused-imports",
+        "simple-import-sort"
+      ],
+      "env": {
+        // Enables global variables available in Astro components.
+        "node": true,
+        "es2020": true
+      },
+      "parser": "astro-eslint-parser",
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "project": "./tsconfig.json",
+        "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+        "import/extensions": [
+          "error",
+          "ignorePackages",
+          {
+            "js": "never",
+            "jsx": "never",
+            "ts": "never",
+            "tsx": "never",
+            "": "never"
+          }
+        ], // Avoid missing file extension errors in .astro files
+        "import/no-unresolved": [
+          "error",
+          {
+            "ignore": ["@/*"]
+          }
+        ], // Disable no-unresolved rule for .astro files
+        "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
+        "@typescript-eslint/consistent-type-imports": "error", // Ensure `import type` is used when it's necessary
+        "import/prefer-default-export": "off", // Named export is easier to refactor automatically
+        "simple-import-sort/imports": "error", // Import configuration for `eslint-plugin-simple-import-sort`
+        "simple-import-sort/exports": "error", // Export configuration for `eslint-plugin-simple-import-sort`
+        "@typescript-eslint/no-unused-vars": "off",
+        "unused-imports/no-unused-imports": "error",
+        "unused-imports/no-unused-vars": [
+          "error",
+          { "argsIgnorePattern": "^_" }
+        ]
+      },
+      "globals": {
+        "Astro": "readonly"
+      }
+    }
+  ]
+}
