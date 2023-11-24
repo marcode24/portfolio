@@ -14,35 +14,96 @@ import {
   <div class="skills">
     <div class="skill">
       <span class="subtitle">Frontend</span>
-      {
-        cardsDataFrontend.map(({ name, imagePath, alt }) => (
-          <CardSkill name={name} imagePath={imagePath} alt={alt} />
-        ))
-      }
+      <div class="cards">
+        {
+          cardsDataFrontend.map(({ name, imagePath, alt }) => (
+            <CardSkill name={name} imagePath={imagePath} alt={alt} />
+          ))
+        }
+      </div>
     </div>
     <div class="skill">
       <span class="subtitle">Backend</span>
-      {
-        cardsDataBackend.map(({ name, imagePath, alt }) => (
-          <CardSkill name={name} imagePath={imagePath} alt={alt} />
-        ))
-      }
+      <div class="cards">
+        {
+          cardsDataBackend.map(({ name, imagePath, alt }) => (
+            <CardSkill name={name} imagePath={imagePath} alt={alt} />
+          ))
+        }
+      </div>
     </div>
     <div class="skill">
-      <span class="subtitle">Others tools</span>
-      {
-        cardsDataOthers.map(({ name, imagePath, alt }) => (
-          <CardSkill name={name} imagePath={imagePath} alt={alt} />
-        ))
-      }
+      <span class="subtitle">Other tools</span>
+      <div class="cards">
+        {
+          cardsDataOthers.map(({ name, imagePath, alt }) => (
+            <CardSkill name={name} imagePath={imagePath} alt={alt} />
+          ))
+        }
+      </div>
     </div>
     <div class="skill">
       <span class="subtitle">Currently learning...</span>
-      {
-        cardsDataLearning.map(({ name, imagePath, alt }) => (
-          <CardSkill name={name} imagePath={imagePath} alt={alt} />
-        ))
-      }
+      <div class="cards">
+        {
+          cardsDataLearning.map(({ name, imagePath, alt }) => (
+            <CardSkill name={name} imagePath={imagePath} alt={alt} />
+          ))
+        }
+      </div>
     </div>
   </div>
 </section>
+
+<style>
+  section#skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+
+  .skills {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    width: 100%;
+  }
+
+  .skills .skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .subtitle {
+    font-size: 34px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(95px,1fr));
+    grid-auto-rows: 1fr;
+    grid-auto-flow: dense;
+    grid-gap: 0.8rem;
+  }
+
+  @media (max-width: 900px) {
+    section#skills {
+      justify-content: flex-start;
+      align-items: center;
+    }
+    section#skills h1.title {
+      align-self: flex-start;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .subtitle {
+      font-size: 28px;
+    }
+  }
+</style>

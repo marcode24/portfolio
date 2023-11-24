@@ -2,19 +2,23 @@
 import About from '@components/About.astro';
 import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
+import Portfolio from '@components/Portfolio.astro';
 import Skills from '@components/Skills.astro';
 import Layout from '@layouts/Layout.astro';
 ---
 
 <Layout title="Welcome to Astro.">
-  <Header />
-	<div class="content">
-		<div class="blur bottom"></div>
-    <div class="blur top"></div>
-    <Hero />
-    <About />
-    <Skills />
-	</div>
+  <div class="wrapper">
+    <Header />
+      <div class="content">
+        <div class="blur bottom"></div>
+        <div class="blur top"></div>
+        <Hero />
+        <About />
+        <Skills />
+        <Portfolio />
+      </div>
+  </div>
 </Layout>
 
 <style>
@@ -23,52 +27,52 @@ import Layout from '@layouts/Layout.astro';
   min-width: 380px;
   position: relative;
   margin: 0 auto;
-}
-
-.content {
-  margin: 0 1rem;
-}
-
-.blur {
-  position: fixed;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 50%;
-  background: #60a5fa;
-  z-index: -9;
-  filter: blur(200px);
-}
-
-.blur.bottom {
-  top: 620px;
-  left: 25%;
-}
-
-.blur.top {
-  top: 100px;
-  left: 75%;
-}
-
-/* @media (min-width: 1024px) {
-  .container {
-    padding: 0px 30px 0 170px;
   }
-} */
 
-@media (max-width: 900px) {
   .content {
     margin: 0 1rem;
   }
-}
 
-@media (max-width: 480px) {
+  .blur {
+    position: fixed;
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    background: #60a5fa;
+    z-index: -9;
+    filter: blur(200px);
+  }
+
   .blur.bottom {
-    top: 380px;
-    left: 0%;
+    top: 620px;
+    left: 25%;
   }
+
   .blur.top {
-    top: 90px;
-    left: 40%;
+    top: 100px;
+    left: 75%;
   }
-}
+
+  /* @media (min-width: 1024px) {
+    .container {
+      padding: 0px 30px 0 170px;
+    }
+  } */
+
+  @media (max-width: 900px) {
+    .content {
+      margin: 0 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .blur.bottom {
+      top: 380px;
+      left: 0%;
+    }
+    .blur.top {
+      top: 90px;
+      left: 40%;
+    }
+  }
 </style>

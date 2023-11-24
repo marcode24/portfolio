@@ -38,34 +38,29 @@
   ],
   "cardsDataBackend": [
     {
-      "name": "Git",
-      "imagePath": "images/git.png",
-      "alt": "git"
+      "name": "Nodejs",
+      "imagePath": "images/nodejs.png",
+      "alt": "nodejs"
     },
     {
-      "name": "Azure",
-      "imagePath": "images/azure.png",
-      "alt": "azure"
+      "name": "MongoDB",
+      "imagePath": "images/mongo.png",
+      "alt": "mongodb"
     },
     {
-      "name": "Figma",
-      "imagePath": "images/figma.png",
-      "alt": "figma"
+      "name": "MySql",
+      "imagePath": "images/mysql.png",
+      "alt": "mysql"
     },
     {
-      "name": "Postman",
-      "imagePath": "images/postman.png",
-      "alt": "postman"
+      "name": "Nestjs",
+      "imagePath": "images/nestjs.png",
+      "alt": "nestjs"
     },
     {
-      "name": "Jest",
-      "imagePath": "images/jest.png",
-      "alt": "jest"
-    },
-    {
-      "name": "Jasmine",
-      "imagePath": "images/jasmine.png",
-      "alt": "jasmine"
+      "name": "Docker",
+      "imagePath": "images/docker.png",
+      "alt": "docker"
     }
   ],
   "cardsDataOthers": [
