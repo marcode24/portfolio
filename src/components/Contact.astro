@@ -1,0 +1,133 @@
+---
+import GithubIcon from '@components/icons/github-icon.astro';
+import InstagramIcon from '@components/icons/instagram-icon.astro';
+import LinkedinIcon from '@components/icons/linkedin-icon.astro';
+import TwitterIcon from '@components/icons/twitter-icon.astro';
+import {
+  EMAIL_URL,
+  GITHUB_URL,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  TWITTER_URL,
+} from '@constants/urls';
+---
+
+<section id="contact">
+  <span class="title">Contact me ✉️</span>
+  <div class="container">
+    <p class="description">
+      I’m currently looking for new opportunities, my inbox is always open!
+    </p>
+    <a href={EMAIL_URL} class="btn">Say Hello</a>
+  </div>
+  <div class="footer">
+    <div class="links">
+      <a target="_blank" href={GITHUB_URL} class="icon">
+        <GithubIcon />
+      </a>
+      <a target="_blank" href={INSTAGRAM_URL} class="icon">
+        <InstagramIcon />
+      </a>
+      <a target="_blank" href={TWITTER_URL} class="icon">
+        <TwitterIcon />
+      </a>
+      <a target="_blank" href={LINKEDIN_URL} class="icon">
+        <LinkedinIcon />
+      </a>
+    </div>
+    <div class="detail">
+      <span class="text">
+        Design and Built with ❤️ by
+        <a target="_blank" href={GITHUB_URL}>Marco Cruz</a>
+      </span>
+    </div>
+  </div>
+</section>
+
+<style>
+  section#contact {
+    margin-bottom: 8rem;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50%;
+    margin: 5rem auto 10rem;
+  }
+
+  .container .description {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .footer {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .links .icon {
+    font-size: 16px;
+    color: var(--secondary-color);
+    transition: 0.4s;
+  }
+
+  .links .icon:hover {
+    color: var(--primary-color);
+  }
+
+  .detail {
+    text-align: center;
+    color: var(--secondary-color);
+  }
+
+  .detail .text {
+    font-size: 22 px;
+  }
+
+  .detail .text a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .container {
+      max-width: 100%;
+      margin: 5rem auto;
+    }
+
+    .container .description {
+      font-size: 21px;
+    }
+
+    .links .icon {
+      font-size: 14px;
+    }
+
+    .detail .text {
+      font-size: 16px;
+    }
+  }
+</style>
