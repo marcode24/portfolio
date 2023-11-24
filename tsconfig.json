@@ -11,6 +11,7 @@
       "@constants/*": ["src/constants/*"],
       "@interfaces/*": ["src/interfaces/*"],
       "@data/*": ["src/data/*"],
+      "@astrojs/svelte": ["node_modules/@astrojs/svelte"]
     }
   },
 }

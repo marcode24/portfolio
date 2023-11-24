@@ -24,6 +24,7 @@ const { title } = Astro.props;
 		<slot />
 	</body>
 </html>
+
 <style is:global>
 	* {
 		margin: 0;
@@ -58,7 +59,7 @@ const { title } = Astro.props;
 		background-color: var(--bg-color);
 	}
 
-	body.dark {
+	body.dark-theme {
 		--bg-color: #111827;
 		--bg-color-2: #3b82f6;
 		--font-color: #f7f7f7;
@@ -146,3 +147,31 @@ const { title } = Astro.props;
 		}
 	}
 </style>
+
+<script>
+  const body = document.body;
+  const theme = localStorage.getItem('theme');
+  const darkThemeName = 'dark-theme';
+
+  const savePreference = (theme: string) => {
+    localStorage.removeItem('theme');
+    localStorage.setItem('theme', theme);
+  }
+
+  const setTheme = (theme: string) => {
+    if(theme === 'light') {
+      body.classList.remove(darkThemeName);
+    }
+    if(theme === darkThemeName) {
+      body.classList.add(darkThemeName);
+    }
+    savePreference(theme);
+  }
+
+  if(!theme) {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setTheme((isDarkMode) ? darkThemeName : 'light');
+  } else {
+    setTheme(theme);
+  }
+</script>

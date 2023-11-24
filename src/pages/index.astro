@@ -3,6 +3,8 @@ import About from '@components/About.astro';
 import Contact from '@components/Contact.astro';
 import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
+import Loader from '@components/Loader.astro';
+import Navigation from '@components/Navigation.svelte';
 import Portfolio from '@components/Portfolio.astro';
 import Skills from '@components/Skills.astro';
 import Layout from '@layouts/Layout.astro';
@@ -11,24 +13,66 @@ import Layout from '@layouts/Layout.astro';
 <Layout title="Marco Cruz - Portfolio">
   <div class="wrapper">
     <Header />
-      <div class="content">
-        <div class="blur bottom"></div>
-        <div class="blur top"></div>
-        <Hero />
-        <About />
-        <Skills />
-        <Portfolio />
-        <Contact />
-      </div>
+    <Navigation client:load/>
+    <div class="content">
+      <div class="blur bottom"></div>
+      <div class="blur top"></div>
+      <Hero />
+      <About />
+      <Skills />
+      <Portfolio />
+      <Contact />
+    </div>
+  </div>
+  <div class="loader">
+    <Loader />
   </div>
 </Layout>
 
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    const loader = document.querySelector('.loader');
+    const wrapper = document.querySelector('.wrapper');
+    const load = (): Promise<void> => {
+      return new Promise(resolve => setTimeout(resolve, 2800));
+    }
+
+    load().then(() => {
+      loader?.remove();
+      wrapper?.classList.add('visible');
+    });
+  });
+</script>
+
 <style>
-	.wrapper {
-  max-width: 1200px;
-  min-width: 380px;
-  position: relative;
-  margin: 0 auto;
+  .wrapper {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2.2s ease-in-out, visibility 2.2s ease-in-out, height 2.2s ease-in-out;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .wrapper.visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    max-width: 1200px;
+    min-width: 380px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .loader {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+  }
+
+  .loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
   }
 
   .content {
@@ -54,12 +98,6 @@ import Layout from '@layouts/Layout.astro';
     top: 100px;
     left: 75%;
   }
-
-  /* @media (min-width: 1024px) {
-    .container {
-      padding: 0px 30px 0 170px;
-    }
-  } */
 
   @media (max-width: 900px) {
     .content {
