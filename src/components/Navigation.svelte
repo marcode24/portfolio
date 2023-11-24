@@ -1,5 +1,11 @@
 <script>
+  import BriefcaseIcon from '@components/icons/briefcase-icon.svelte';
+  import EnvelopeIcon from '@components/icons/envelope-icon.svelte';
   import HomeIcon from '@components/icons/home-icon.svelte';
+  import UserIcon from '@components/icons/user-icon.svelte';
+  import WrenchIcon from '@components/icons/wrench-icon.svelte';
+  import SunIcon from '@components/icons/sun-icon.svelte';
+  import MoonIcon from '@components/icons/moon-icon.svelte';
   import { onMount } from 'svelte';
 
   let current = '';
@@ -53,25 +59,25 @@
     </li>
     <li class="about">
       <a href="#about">
-        <fa-icon [icon]="['fas', 'user']" size="2x" class="icon"></fa-icon>
+        <UserIcon />
         <span class="title">About me</span>
       </a>
     </li>
     <li class="skills">
       <a href="#skills">
-        <fa-icon [icon]="['fas', 'wrench']" size="2x" class="icon"></fa-icon>
+        <WrenchIcon />
         <span class="title">My skills</span>
       </a>
     </li>
     <li class="portfolio">
       <a href="#portfolio">
-        <fa-icon [icon]="['fas', 'briefcase']" size="2x" class="icon"></fa-icon>
+        <BriefcaseIcon />
         <span class="title">My portfolio</span>
       </a>
     </li>
     <li class="contact">
       <a href="#contact">
-        <fa-icon [icon]="['fas', 'envelope']" size="2x" class="icon"></fa-icon>
+        <EnvelopeIcon />
         <span class="title">Contact me</span>
       </a>
     </li>
@@ -81,7 +87,13 @@
     </li>
     <li>
       <a on:click={setTheme}>
-        <fa-icon [icon]="['fas', (!isDarkTheme) ? 'moon' : 'sun']" size="2x" class="icon"></fa-icon>
+        {#if isDarkTheme}
+        <SunIcon />
+        <span class="title">Light theme</span>
+        {:else}
+        <MoonIcon />
+        <span class="title">Dark theme</span>
+        {/if}
       </a>
     </li>
   </ul>
