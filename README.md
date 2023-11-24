@@ -1,54 +1,21 @@
-# Astro Starter Kit: Basics
+<div align="center">
+  <h1> 💼 Portfolio</h1>
+  <a href="https://marco-cruz.netlify.app/" target="_blank">View portfolio</a>
+  <br/><br/>
 
-```sh
-npm create astro@latest -- --template basics
-```
+  ![Version](https://img.shields.io/github/package-json/v/marcode24/portfolio?style=popout&logo=npm)
+  ![GitHub CI Workflow Status](https://img.shields.io/github/actions/workflow/status/marcode24/portfolio/linter.yml?branch=main&style=popout&logo=testcafe&label=linter)
+  ![GitHub repo size](https://img.shields.io/github/repo-size/marcode24/portfolio?style=popout&logo=github&label=repo%20size)
+  ![GitHub](https://img.shields.io/github/license/marcode24/portfolio?style=popout&logo=github&label=license)
+  ![GitHub Repo stars](https://img.shields.io/github/stars/marcode24/portfolio?style=popout&logo=apachespark&color=yellow&logoColor=yellow)
+  ![Github repo views](https://img.shields.io/github/search/marcode24/portfolio/portfolio?style=popout&logo=github&label=repo%20views)
+  ![GitHub last commit](https://img.shields.io/github/last-commit/marcode24/portfolio?style=popout&logo=git&label=last%20commit)
+</div>
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Description
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is my personal portfolio, where you can find my projects, skills, and contact information.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## 📝 License
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is under the [MIT](./LICENSE) license. See the LICENSE for more information. 😉

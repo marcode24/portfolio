@@ -1,0 +1,189 @@
+---
+import GithubIcon from '@components/icons/github-icon.astro';
+import LinkedinIcon from '@components/icons/linkedin-icon.astro';
+import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
+---
+
+<section class="home" id="home">
+  <div class="main-title">
+    <h1 class="title">Hello there!<span>✌️</span></h1>
+    <h2 class="title">I'm <span class="subtitle-name">Marco</span></h2>
+    <span class="title-job">Frontend Developer</span>
+    <div class="bottom">
+      <button class="button-home"> Download CV </button>
+      <div class="social">
+        <a target="_blank" href={GITHUB_URL} class="icon">
+          <GithubIcon height={45} width={45} />
+        </a>
+        <a target="_blank" href={LINKEDIN_URL} class="icon">
+          <LinkedinIcon height={45} width={45} />
+        </a>
+      </div>
+    </div>
+  </div>
+  <figure>
+    <img src="me.jpg" alt="profile-image" class="profile">
+  </figure>
+</section>
+
+<style>
+  section.home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh !important;
+    margin: 0;
+  }
+
+  .main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.3rem;
+  }
+
+  .main-title .bottom {
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .main-title .bottom .social {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .main-title .bottom .social a {
+    text-decoration: none;
+    transition: 0.4s;
+    color: var(--secondary-color);
+    font-size: 20px;
+  }
+
+  .main-title .bottom .social a:hover {
+    color: var(--primary-color);
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 64px;
+    cursor: default;
+  }
+
+  h1.title span {
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+  }
+
+  h1.title:hover > span {
+    animation: move 0.6s ease-in-out;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-7px);
+      rotate: -7deg;
+    }
+    50% {
+      transform: translateX(7px);
+      rotate: 7deg;
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  h2.title {
+    font-weight: bold;
+    font-size: 64px;
+  }
+
+  h2.title span.subtitle-name {
+    font-size: 64;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  span.title-job {
+    font-size: 38px;
+    font-weight: bold;
+  }
+
+  .home figure {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 30rem;
+    height: 28rem;
+  }
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 63% 37% 48% 52% / 60% 57% 43% 40%;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    background: #3b82f6;
+  }
+
+  @media (max-width: 1024px) {
+    .home figure {
+      width: 28rem;
+      height: 23rem;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .home figure {
+      width: 28rem;
+      height: 23rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    section.home {
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .main-title {
+      text-align: center;
+    }
+    h1.title,
+    h2.title {
+      font-size: 52px;
+      margin: 0;
+    }
+    span.title-job {
+      font-size: 28px;
+    }
+    .home figure {
+      width: 18rem;
+      height: 18rem;
+    }
+    .main-title .bottom {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1.title,
+    h2.title {
+      font-size: 42px;
+    }
+    span.title-job {
+      font-size: 28px;
+    }
+    .home figure {
+      width: 14rem;
+      height: 14rem;
+    }
+  }
+</style>
