@@ -1,0 +1,70 @@
+---
+const YEARS_OLD = new Date().getFullYear() - 2001;
+---
+
+<section id="about">
+  <span class="title">About me 👨</span>
+  <p class="description">
+    I'm Marco Antonio Cruz Gabino, I'm {YEARS_OLD} years old and
+    I'm a computer science student who is passionate about writing code,
+    solving problems and building software.</p>
+  <br>
+  <p class="description">
+    I'm currently learning Backend
+    development to complement my web skills
+  </p>
+  <figure>
+    <img src="assets/svg/about.svg" alt="about me">
+  </figure>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+  }
+
+  section .description {
+    font-size: 24px;
+    font-weight: 500;
+    max-width: 70%;
+    text-align: justify;
+  }
+
+  section figure {
+    align-self: flex-end;
+    width: 45rem;
+    height: 22rem;
+    margin-top: 1rem;
+  }
+
+  section figure img {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 900px) {
+    section {
+      padding: 0;
+    }
+    section figure {
+      margin-top: 2rem;
+      width: 100%;
+      height: 15rem;
+    }
+    section .description {
+      font-size: 18px;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    section figure {
+      margin-top: 2rem;
+      width: 23rem;
+      height: 8rem;
+    }
+  }
+</style>

@@ -1,0 +1,48 @@
+---
+import CardSkill from '@components/cards/CardSkill.astro';
+import {
+  cardsDataBackend,
+  cardsDataFrontend,
+  cardsDataLearning,
+  cardsDataOthers,
+} from '@data/skills.json';
+
+---
+
+<section id="skills">
+  <span class="title">My skills 🛠️</span>
+  <div class="skills">
+    <div class="skill">
+      <span class="subtitle">Frontend</span>
+      {
+        cardsDataFrontend.map(({ name, imagePath, alt }) => (
+          <CardSkill name={name} imagePath={imagePath} alt={alt} />
+        ))
+      }
+    </div>
+    <div class="skill">
+      <span class="subtitle">Backend</span>
+      {
+        cardsDataBackend.map(({ name, imagePath, alt }) => (
+          <CardSkill name={name} imagePath={imagePath} alt={alt} />
+        ))
+      }
+    </div>
+    <div class="skill">
+      <span class="subtitle">Others tools</span>
+      {
+        cardsDataOthers.map(({ name, imagePath, alt }) => (
+          <CardSkill name={name} imagePath={imagePath} alt={alt} />
+        ))
+      }
+    </div>
+    <div class="skill">
+      <span class="subtitle">Currently learning...</span>
+      {
+        cardsDataLearning.map(({ name, imagePath, alt }) => (
+          <CardSkill name={name} imagePath={imagePath} alt={alt} />
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,115 @@
+{
+  "cardsDataFrontend": [
+    {
+      "name": "HTML",
+      "imagePath": "images/html.png",
+      "alt": "html"
+    },
+    {
+      "name": "CSS 3",
+      "imagePath": "images/css.png",
+      "alt": "css"
+    },
+    {
+      "name": "Javascript",
+      "imagePath": "images/js.png",
+      "alt": "js"
+    },
+    {
+      "name": "Typescript",
+      "imagePath": "images/ts.png",
+      "alt": "ts"
+    },
+    {
+      "name": "SASS",
+      "imagePath": "images/sass.png",
+      "alt": "scss"
+    },
+    {
+      "name": "Angular",
+      "imagePath": "images/angular.png",
+      "alt": "angular"
+    },
+    {
+      "name": "Bootstrap",
+      "imagePath": "images/bootstrap.png",
+      "alt": "bootstrap"
+    }
+  ],
+  "cardsDataBackend": [
+    {
+      "name": "Git",
+      "imagePath": "images/git.png",
+      "alt": "git"
+    },
+    {
+      "name": "Azure",
+      "imagePath": "images/azure.png",
+      "alt": "azure"
+    },
+    {
+      "name": "Figma",
+      "imagePath": "images/figma.png",
+      "alt": "figma"
+    },
+    {
+      "name": "Postman",
+      "imagePath": "images/postman.png",
+      "alt": "postman"
+    },
+    {
+      "name": "Jest",
+      "imagePath": "images/jest.png",
+      "alt": "jest"
+    },
+    {
+      "name": "Jasmine",
+      "imagePath": "images/jasmine.png",
+      "alt": "jasmine"
+    }
+  ],
+  "cardsDataOthers": [
+    {
+      "name": "Git",
+      "imagePath": "images/git.png",
+      "alt": "git"
+    },
+    {
+      "name": "Azure",
+      "imagePath": "images/azure.png",
+      "alt": "azure"
+    },
+    {
+      "name": "Figma",
+      "imagePath": "images/figma.png",
+      "alt": "figma"
+    },
+    {
+      "name": "Postman",
+      "imagePath": "images/postman.png",
+      "alt": "postman"
+    },
+    {
+      "name": "Jest",
+      "imagePath": "images/jest.png",
+      "alt": "jest"
+    },
+    {
+      "name": "Jasmine",
+      "imagePath": "images/jasmine.png",
+      "alt": "jasmine"
+    }
+  ],
+  "cardsDataLearning": [
+    {
+      "name": "Vue",
+      "imagePath": "images/vue.png",
+      "alt": "vue"
+    },
+    {
+      "name": "Tailwind",
+      "imagePath": "images/tailwind.png",
+      "alt": "tailwind"
+    }
+  ]
+}

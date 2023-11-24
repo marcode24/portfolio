@@ -1,0 +1,64 @@
+---
+interface Props {
+  imagePath: string;
+  name: string;
+  alt: string;
+}
+
+const { imagePath, name, alt }: Props = Astro.props;
+---
+
+<div class="card">
+  <div class="body">
+    <img src={imagePath} alt={`${alt}-image`} loading="lazy">
+    <p class="title">{name}</p>
+  </div>
+</div>
+
+<style>
+  .card {
+    border-radius: 15px;
+    /* width: 100px;
+    height: 100px; */
+    padding: 12px 20px;
+    box-shadow: 0px 0 5px 1px rgb(0 0 0 / 10%);
+    background: var(--bg-color);
+    border: 1px solid var(--border-color-nav);
+    transition: 0.4s;
+  }
+
+  .card .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .card .body img {
+    width: auto;
+    height: 45px;
+  }
+
+  .card .body p.title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      /* width: 90px;
+      height: 90px; */
+      border-radius: 10px;
+    }
+
+    .card .body img {
+      height: 40px;
+    }
+    .card .body p.title {
+      font-size: 14px;
+    }
+  }
+</style>
