@@ -156,10 +156,6 @@
     background: var(--primary-color);
   }
 
-  nav ul.nav li.active a fa-icon {
-    color: #fff;
-  }
-
   nav ul.nav li a {
     position: relative;
     display: flex;
@@ -172,10 +168,8 @@
     font-weight: bold;
   }
 
-  nav ul.nav li a .icon {
-    position: relative;
-    display: block;
-    text-align: center;
+  nav ul.nav li.active a {
+    color: #fff;
   }
 
   nav ul.nav li a .title {
@@ -236,10 +230,6 @@
     nav ul.nav li {
       width: 46px;
       height: 46px;
-    }
-
-    nav ul.nav li a fa-icon {
-      font-size: 12px;
     }
   }
 </style>

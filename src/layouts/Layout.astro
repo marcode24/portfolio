@@ -4,6 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const fontRedressed = 'https://fonts.googleapis.com/css2?family='
+	+ 'Redressed&family=Yellowtail&display=swap';
+const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
+	+ 'Redressed&family=Space+Grotesk:wght@300;400;500;600;700&family='
+	+ 'Yellowtail&display=swap';
 ---
 
 <!doctype html>
@@ -12,11 +17,9 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Redressed&family=Yellowtail&display=swap" rel="stylesheet">
-		<link
-			href="https://fonts.googleapis.com/css2?family=Redressed&family=Space+Grotesk:wght@300;400;500;600;700&family=Yellowtail&display=swap"
-			rel="stylesheet">
+		<link rel="icon" type="image/svg+xml" href="/logo.ico" />
+		<link href={fontRedressed} rel="stylesheet">
+		<link href={fontSpaceGrotesk} rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>

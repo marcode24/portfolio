@@ -6,7 +6,7 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
 
 <section class="home" id="home">
   <div class="main-title">
-    <h1 class="title">Hello there!✌️</h1>
+    <h1 class="title">Hello there!<span>✌️</span></h1>
     <h2 class="title">I'm <span class="subtitle-name">Marco</span></h2>
     <span class="title-job">Frontend Developer</span>
     <div class="bottom">
@@ -22,7 +22,7 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     </div>
   </div>
   <figure>
-    <img src="assets/picture.png" alt="profile-image" class="profile">
+    <img src="me.jpg" alt="profile-image" class="profile">
   </figure>
 </section>
 
@@ -67,9 +67,37 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     color: var(--primary-color);
   }
 
-  h1.title {
+  .title {
     font-weight: bold;
     font-size: 64px;
+    cursor: default;
+  }
+
+  h1.title span {
+    display: inline-block;
+    position: relative;
+    transition: 0.6s;
+  }
+
+  h1.title:hover > span {
+    animation: move 0.6s ease-in-out;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateX(0px);
+    }
+    25% {
+      transform: translateX(-7px);
+      rotate: -7deg;
+    }
+    50% {
+      transform: translateX(7px);
+      rotate: 7deg;
+    }
+    100% {
+      transform: translateX(0);
+    }
   }
 
   h2.title {
@@ -91,8 +119,8 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
   .home figure {
     display: inline-block;
     box-sizing: border-box;
-    width: 35rem;
-    height: 30rem;
+    width: 30rem;
+    height: 28rem;
   }
 
   img {
@@ -123,6 +151,7 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     section.home {
       flex-direction: column-reverse;
       justify-content: center;
+      gap: 2rem;
     }
     .main-title {
       text-align: center;
