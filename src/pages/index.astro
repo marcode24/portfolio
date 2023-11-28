@@ -33,11 +33,12 @@ import Layout from '@layouts/Layout.astro';
 </Layout>
 
 <script>
+  console.log('cambiar a load');
    document.addEventListener("DOMContentLoaded", function() {
     const loader = document.querySelector('.loader');
     const wrapper = document.querySelector('.wrapper');
     const load = (): Promise<void> => {
-      return new Promise(resolve => setTimeout(resolve, 2800));
+      return new Promise(resolve => setTimeout(resolve, 0));
     }
 
     load().then(() => {
