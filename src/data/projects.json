@@ -1,13 +1,26 @@
 [
   {
+    "name": "Cloud Box",
+    "description": "This is a simple cloud storage service that allows users to upload and download files. Here you can also create folders and subfolders to organize your files",
+    "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1683409111/cloudbox/desktop/home_eshrq7.png",
+    "technologies": [
+      { "name": "Angular", "image": "angular.png" },
+      { "name": "NodeJs", "image": "nodejs.png" },
+      { "name": "MongoDB", "image": "mongo.png" },
+      { "name": "Docker", "image": "docker.png" }
+    ],
+    "urlGithub": "https://github.com/marcode24/cloudbox-frontend",
+    "urlProduction": "https://cloudbox-m.netlify.app/"
+  },
+  {
     "name": "InfoReader App",
     "description": "This is a web application that allows you to read technology news, using RSS feeds from different sources and saving them in a database. It also allows you to create a user account and save your favorite news.",
     "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1658775333/InfoReader/InfoReader_dok2nr.png",
     "technologies": [
       { "name": "Angular", "image": "angular.png" },
       { "name": "NodeJs", "image": "nodejs.png" },
-      { "name": "Express", "image": "nodejs.png" },
-      { "name": "MongoDB", "image": "mongo.png" }
+      { "name": "MongoDB", "image": "mongo.png" },
+      { "name": "Docker", "image": "docker.png" }
     ],
     "urlGithub": "https://github.com/marcode24/InfoReader-App",
     "urlProduction": "https://inforeader.netlify.app/"
@@ -39,13 +52,40 @@
     "urlProduction": "https://bon-appetito.netlify.app/"
   },
   {
+    "name": "Guess Word Game",
+    "description": "This a game where you have to guess the answer to a question. Depending on the difficulty level, you will have a certain number of attempts to guess the answer. The game ends when you run out of attempts or you guess the answer correctly",
+    "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1701200572/Word%20Guess/jbnl5yxfngac4hwx2wut.png",
+    "technologies": [
+      { "name": "Angular", "image": "angular.png" },
+      { "name": "NodeJs", "image": "nodejs.png" },
+      { "name": "SASS", "image": "sass.png" },
+      { "name": "MongoDB", "image": "mongo.png" }
+    ],
+    "urlGithub": "https://github.com/marcode24/GuessWord-Game",
+    "urlProduction": "https://wordguess-game.netlify.app/"
+  },
+  {
+    "name": "Twitter Clone",
+    "description": "This is a clone of the Twitter application, it allows you to create a user account, post tweets, follow other users, like tweets, etc.",
+    "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1701200944/atdubgkoqljcn4kabxfd.png",
+    "technologies": [
+      { "name": "Angular", "image": "angular.png" },
+      { "name": "NodeJs", "image": "nodejs.png" },
+      { "name": "SASS", "image": "sass.png" },
+      { "name": "MongoDB", "image": "mongo.png" }
+    ],
+    "urlGithub": "https://github.com/marcode24/twitter-clone",
+    "urlProduction": "https://twitter-clone-challenge.netlify.app/"
+  },
+  {
     "name": "Memory Game",
     "description": "This is a memory game, you have to find the pairs of cards, you have 3 levels of difficulty, easy, medium and hard.",
     "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1675889755/Memory%20Game/Card-Memory-Game_yjtzmp.png",
     "technologies": [
       { "name": "HTML", "image": "html.png" },
       { "name": "CSS", "image": "css.png" },
-      { "name": "JavaScript", "image": "js.png" }
+      { "name": "TypeScript", "image": "ts.png" },
+      { "name": "Angular", "image": "angular.png"}
     ],
     "urlGithub": "https://github.com/marcode24/memory-game",
     "urlProduction": "https://marcode24.github.io/memory-game/"
