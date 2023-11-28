@@ -7,9 +7,9 @@ const YEARS_OLD = new Date().getFullYear() - 2001;
   <div class="wrap">
     <div class="description">
       <p>
-        I'm Marco Antonio Cruz Gabino, I'm {YEARS_OLD} years old and
-        I'm a computer science student who is passionate about writing code,
-        solving problems and building software.</p>
+        I'm <span class="high"> Marco Antonio Cruz Gabino </span>, I'm {YEARS_OLD} years old and
+        I'm a computer science student who is passionate about <span class="high"> writing code,
+        solving problems and building software.</span></p>
       <br>
       <p>
         I'm currently learning Backend
@@ -43,6 +43,11 @@ const YEARS_OLD = new Date().getFullYear() - 2001;
     font-size: 22px;
     font-weight: normal;
     line-height: 1.5;
+    color: var(--font-color-2);
+  }
+
+  .description .high {
+    color: var(--primary-color);
   }
 
   .image {

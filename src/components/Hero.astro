@@ -61,16 +61,24 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     transition: 0.4s;
     color: var(--secondary-color);
     font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main-title .bottom .social a:hover {
     color: var(--primary-color);
   }
 
-  .title {
+  h1.title, h2.title {
     font-weight: bold;
     font-size: 64px;
     cursor: default;
+    color: var(--font-color);
+  }
+
+  h2.title {
+    font-size: 60px;
   }
 
   h1.title span {
@@ -100,11 +108,6 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     }
   }
 
-  h2.title {
-    font-weight: bold;
-    font-size: 64px;
-  }
-
   h2.title span.subtitle-name {
     font-size: 64;
     font-weight: bold;
@@ -112,8 +115,9 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
   }
 
   span.title-job {
-    font-size: 38px;
+    font-size: 32px;
     font-weight: bold;
+    color: var(--font-color-2);
   }
 
   .home figure {
