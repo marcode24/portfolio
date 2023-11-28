@@ -9,7 +9,6 @@ import Navigation from '@components/Navigation.svelte';
 import Portfolio from '@components/Portfolio.astro';
 import Skills from '@components/Skills.astro';
 import Layout from '@layouts/Layout.astro';
-
 ---
 
 <Layout title="Marco Cruz - Portfolio">
@@ -37,12 +36,19 @@ import Layout from '@layouts/Layout.astro';
     const loader = document.querySelector('.loader');
     const wrapper = document.querySelector('.wrapper');
     const load = (): Promise<void> => {
-      return new Promise(resolve => setTimeout(resolve, 2800));
+      return new Promise(resolve => setTimeout(resolve, 1500));
     }
 
     load().then(() => {
       loader?.remove();
+      const fragment = window.location.hash;
       wrapper?.classList.add('visible');
+      if(fragment) {
+        const targetElement = document.querySelector(fragment);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     });
   });
 </script>
