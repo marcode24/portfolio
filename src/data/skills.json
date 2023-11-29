@@ -11,24 +11,34 @@
       "alt": "css"
     },
     {
-      "name": "Javascript",
+      "name": "JavaScript",
       "imagePath": "images/js.png",
       "alt": "js"
     },
     {
-      "name": "Typescript",
+      "name": "TypeScript",
       "imagePath": "images/ts.png",
       "alt": "ts"
-    },
-    {
-      "name": "SASS",
-      "imagePath": "images/sass.png",
-      "alt": "scss"
     },
     {
       "name": "Angular",
       "imagePath": "images/angular.png",
       "alt": "angular"
+    },
+    {
+      "name": "Astro",
+      "imagePath": "images/astro.png",
+      "alt": "astro"
+    },
+    {
+      "name": "Svelte",
+      "imagePath": "images/svelte.png",
+      "alt": "svelte"
+    },
+    {
+      "name": "SASS",
+      "imagePath": "images/sass.png",
+      "alt": "scss"
     },
     {
       "name": "Bootstrap",
@@ -43,19 +53,29 @@
       "alt": "nodejs"
     },
     {
+      "name": "Nestjs",
+      "imagePath": "images/nestjs.png",
+      "alt": "nestjs"
+    },
+    {
       "name": "MongoDB",
       "imagePath": "images/mongo.png",
       "alt": "mongodb"
     },
     {
+      "name": "PostgreSql",
+      "imagePath": "images/postgresql.png",
+      "alt": "postgresql"
+    },
+    {
+      "name": "Sql Server",
+      "imagePath": "images/sqlserver.png",
+      "alt": "sqlserver"
+    },
+    {
       "name": "MySql",
       "imagePath": "images/mysql.png",
       "alt": "mysql"
-    },
-    {
-      "name": "Nestjs",
-      "imagePath": "images/nestjs.png",
-      "alt": "nestjs"
     },
     {
       "name": "Docker",

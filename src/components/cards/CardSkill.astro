@@ -18,9 +18,10 @@ const { imagePath, name, alt }: Props = Astro.props;
 <style>
   .card {
     border-radius: 1rem;
-    padding: 12px 20px;
+    padding: 1rem;
     background-color: var(--bg-color-button);
-    transition: 0.4s;
+    transition: 0.3s;
+    border: 1px solid var(--border-color-nav);
   }
 
   .card .body {
@@ -40,17 +41,18 @@ const { imagePath, name, alt }: Props = Astro.props;
 
   .card .body p.title {
     font-size: 16px;
-    font-weight: normal;
+    font-weight: 500;
     color: var(--font-color);
   }
 
   @media (max-width: 480px) {
     .card {
       border-radius: 0.8rem;
+      padding: 0.8rem;
     }
 
     .card .body img {
-      height: 40px;
+      height: 35px;
     }
     .card .body p.title {
       font-size: 14px;
