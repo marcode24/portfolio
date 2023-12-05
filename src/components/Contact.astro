@@ -1,7 +1,9 @@
 ---
+import CopyIcon from '@components/icons/copy-icon.astro';
 import GithubIcon from '@components/icons/github-icon.astro';
 import InstagramIcon from '@components/icons/instagram-icon.astro';
 import LinkedinIcon from '@components/icons/linkedin-icon.astro';
+import SendIcon from '@components/icons/send-icon.astro';
 import TwitterIcon from '@components/icons/twitter-icon.astro';
 import {
   EMAIL_URL,
@@ -10,6 +12,7 @@ import {
   LINKEDIN_URL,
   TWITTER_URL,
 } from '@constants/urls';
+
 ---
 
 <section id="contact">
@@ -18,7 +21,19 @@ import {
     <p class="description">
       I’m currently looking for new opportunities, my inbox is always open!
     </p>
-    <a href={EMAIL_URL} class="btn">Say Hello</a>
+    <div class="email-wrapper">
+      <div class="email">
+        <span>{EMAIL_URL}</span>
+      </div>
+      <div class="buttons">
+        <a href={`mailto:${EMAIL_URL}`} class="btn icon">
+          <SendIcon width={28} height={28} />
+        </a>
+        <button class="btn icon copy">
+          <CopyIcon width={28} height={28} />
+        </button>
+      </div>
+    </div>
   </div>
   <div class="footer">
     <div class="links">
@@ -43,6 +58,17 @@ import {
     </div>
   </div>
 </section>
+
+<script>
+  const copyToClipboard = () => {
+    const emailUrl = document.querySelector('.email span')?.textContent || '';
+    navigator.clipboard.writeText(emailUrl);
+  };
+
+  document.querySelector('.copy')?.addEventListener('click', () => {
+    copyToClipboard();
+  });
+</script>
 
 <style>
   section#contact {
@@ -99,7 +125,7 @@ import {
   }
 
   .detail .text {
-    font-size: 22 px;
+    font-size: 22px;
   }
 
   .detail .text a {
@@ -107,9 +133,48 @@ import {
     color: var(--primary-color);
   }
 
+  .email-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .email-wrapper .email {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--bg-color-button);
+    border-radius: 0.5rem;
+    color: var(--font-color);
+    border: 1px solid var(--border-color);
+    font-size: 22px;
+    font-weight: 500;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .email-wrapper .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .email-wrapper .buttons .icon {
+    padding: 12px 16px;
+    border-radius: 0.5rem;
+    background-color: var(--bg-color-button-2);
+    color: var(--bg-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    gap: 0.5rem;
+  }
+
   @media (max-width: 768px) {
     .container {
-      max-width: 80%;
+      max-width: 90%;
     }
   }
 
@@ -129,6 +194,10 @@ import {
 
     .detail .text {
       font-size: 16px;
+    }
+
+    .email-wrapper .email {
+      font-size: 18px;
     }
   }
 </style>
