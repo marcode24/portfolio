@@ -1,4 +1,13 @@
 <div align="center">
+  <img
+    alt="weekly-challenges"
+    src="https://res.cloudinary.com/dfeujtobk/image/upload/v1705960644/Portfolio/840shots_so_d3ber6.png"
+    width="1200"
+    style="border-radius: 1rem" />
+
+  <br />
+  <br />
+
   <h1> 💼 Portfolio</h1>
   <a href="https://marco-cruz.netlify.app/" target="_blank">View portfolio</a>
   <br/><br/>
