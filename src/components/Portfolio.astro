@@ -75,14 +75,12 @@ import projects from '@data/projects.json';
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
   }
 
   .project picture {
-    height: 20rem;
-    width: 50%;
     border-radius: 1rem;
     overflow: hidden;
-    background-color: var(--bg-color-button);
   }
 
   .project picture img {
@@ -99,26 +97,24 @@ import projects from '@data/projects.json';
   }
 
   .description {
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    margin-left: 2rem;
     line-height: 1.8rem;
+    gap: 1.2rem;
   }
 
   .description .title {
     font-size: 2.8rem;
     font-weight: bold;
-    margin-bottom: 1rem;
     color: var(--font-color);
   }
 
   .description .body {
     font-size: 1.2rem;
     font-weight: 500;
-    margin-bottom: 1rem;
     color: var(--font-color-2);
   }
 
@@ -127,7 +123,6 @@ import projects from '@data/projects.json';
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 1rem;
     gap: 1rem;
   }
 
@@ -172,6 +167,7 @@ import projects from '@data/projects.json';
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      gap: 1.8rem;
     }
 
     .project picture {
@@ -187,7 +183,7 @@ import projects from '@data/projects.json';
 
     .description {
       width: 100%;
-      margin-left: 0;
+      line-height: 1.6rem;
     }
 
     .description .title {
