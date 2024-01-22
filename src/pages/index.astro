@@ -36,7 +36,7 @@ import Layout from '@layouts/Layout.astro';
     const loader = document.querySelector('.loader');
     const wrapper = document.querySelector('.wrapper');
     const load = (): Promise<void> => {
-      return new Promise(resolve => setTimeout(resolve, 1500));
+      return new Promise(resolve => setTimeout(resolve, 0));
     }
 
     load().then(() => {

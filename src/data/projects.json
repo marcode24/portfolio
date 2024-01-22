@@ -54,7 +54,7 @@
   {
     "name": "Guess Word Game",
     "description": "This a game where you have to guess the answer to a question. Depending on the difficulty level, you will have a certain number of attempts to guess the answer. The game ends when you run out of attempts or you guess the answer correctly",
-    "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1705812501/Portfolio/86shots_so_dkuech.png",
+    "image": "https://res.cloudinary.com/dfeujtobk/image/upload/v1705958849/Portfolio/qbvnsvant4lberbsvcob.png",
     "technologies": [
       { "name": "Angular", "image": "angular.png" },
       { "name": "NodeJs", "image": "nodejs.png" },
