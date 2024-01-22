@@ -11,9 +11,11 @@ import projects from '@data/projects.json';
     {
       projects.map((project) => (
         <div class="project">
-          <picture>
-            <img src={project.image} alt="project-preview" loading="lazy">
-          </picture>
+          <a href={project.urlProduction} target="_blank">
+            <picture>
+              <img src={project.image} alt="project-preview" loading="lazy">
+            </picture>
+          </a>
           <div class="description">
             <span class="title">{project.name}</span>
             <p class="body">{project.description}</p>
@@ -90,11 +92,9 @@ import projects from '@data/projects.json';
     border-radius: 0.8rem;
     object-fit: cover;
     transition: 0.3s ease;
-    transform: translate(10%, 15%);
   }
 
   .project picture img:hover {
-    transform: translate(8%, 13%);
     transition: 0.3s ease;
   }
 
