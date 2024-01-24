@@ -27,10 +27,10 @@ import {
       </div>
       <div class="buttons">
         <a href={`mailto:${EMAIL_URL}`} class="btn icon">
-          <SendIcon width={28} height={28} />
+          <SendIcon width={26} height={26} />
         </a>
         <button class="btn icon copy">
-          <CopyIcon width={28} height={28} />
+          <CopyIcon width={26} height={26} />
         </button>
       </div>
     </div>
@@ -142,16 +142,23 @@ import {
   }
 
   .email-wrapper .email {
-    padding: 0.8rem 1.2rem;
+    padding: 9px 16px;
+    height: 44px;
     background-color: var(--bg-color-button);
     border-radius: 0.5rem;
     color: var(--font-color);
     border: 1px solid var(--border-color);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 500;
     width: 100%;
     overflow: hidden;
+  }
+
+  .email-wrapper .email span {
+    display: block;
+    overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .email-wrapper .buttons {
@@ -197,7 +204,7 @@ import {
     }
 
     .email-wrapper .email {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 </style>
