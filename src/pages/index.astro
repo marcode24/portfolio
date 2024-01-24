@@ -4,7 +4,6 @@ import ButtonTop from '@components/buttons/button-top.svelte';
 import Contact from '@components/Contact.astro';
 import Header from '@components/Header.astro';
 import Hero from '@components/Hero.astro';
-import Loader from '@components/Loader.astro';
 import Navigation from '@components/Navigation.svelte';
 import Portfolio from '@components/Portfolio.astro';
 import Skills from '@components/Skills.astro';
@@ -25,63 +24,20 @@ import Layout from '@layouts/Layout.astro';
       <Contact />
     </div>
   </div>
-  <div class="loader">
-    <Loader />
-  </div>
   <ButtonTop client:idle/>
 </Layout>
 
-<script>
-   document.addEventListener("DOMContentLoaded", function() {
-    const loader = document.querySelector('.loader');
-    const wrapper = document.querySelector('.wrapper');
-    const load = (): Promise<void> => {
-      return new Promise(resolve => setTimeout(resolve, 0));
-    }
-
-    load().then(() => {
-      loader?.remove();
-      const fragment = window.location.hash;
-      wrapper?.classList.add('visible');
-      if(fragment) {
-        const targetElement = document.querySelector(fragment);
-        if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-        }
-      }
-    });
-  });
-</script>
-
 <style>
   .wrapper {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 2.2s ease-in-out, visibility 2.2s ease-in-out, height 2.2s ease-in-out;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .wrapper.visible {
     opacity: 1;
     visibility: visible;
-    height: auto;
+    transition: opacity 2.2s ease-in-out, visibility 2.2s ease-in-out, height 2.2s ease-in-out;
+    overflow: hidden;
     max-width: 1200px;
     min-width: 380px;
-    position: relative;
+    height: auto;
     margin: 0 auto;
-  }
-
-  .loader {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
-  }
-
-  .loader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
+    position: relative;
   }
 
   .content {
