@@ -26,10 +26,10 @@ import {
         <span>{EMAIL_URL}</span>
       </div>
       <div class="buttons">
-        <a href={`mailto:${EMAIL_URL}`} class="btn icon">
+        <a href={`mailto:${EMAIL_URL}`} class="btn icon" aria-label="Send email">
           <SendIcon width={28} height={28} />
         </a>
-        <button class="btn icon copy">
+        <button class="btn icon copy" aria-label="Copy email">
           <CopyIcon width={28} height={28} />
         </button>
       </div>
@@ -37,23 +37,25 @@ import {
   </div>
   <div class="footer">
     <div class="links">
-      <a target="_blank" href={GITHUB_URL} class="icon">
+      <a target="_blank" href={GITHUB_URL} class="icon" aria-label="Github">
         <GithubIcon />
       </a>
-      <a target="_blank" href={INSTAGRAM_URL} class="icon">
+      <a target="_blank" href={INSTAGRAM_URL} class="icon" aria-label="Instagram">
         <InstagramIcon />
       </a>
-      <a target="_blank" href={TWITTER_URL} class="icon">
+      <a target="_blank" href={TWITTER_URL} class="icon" aria-label="Twitter">
         <TwitterIcon />
       </a>
-      <a target="_blank" href={LINKEDIN_URL} class="icon">
+      <a target="_blank" href={LINKEDIN_URL} class="icon" aria-label="Linkedin">
         <LinkedinIcon />
       </a>
     </div>
     <div class="detail">
       <span class="text">
         Design and Built with ❤️ by
-        <a target="_blank" href={GITHUB_URL}>Marco Cruz</a>
+        <a target="_blank" href={GITHUB_URL} aria-label="Github profile">
+          Marco Cruz
+        </a>
       </span>
     </div>
   </div>

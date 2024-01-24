@@ -52,31 +52,31 @@
 <nav>
   <ul class="nav">
     <li class="home active">
-      <a href="#home">
+      <a href="#home" aria-label="Home section">
         <HomeIcon />
         <span class="title">Home</span>
       </a>
     </li>
     <li class="about">
-      <a href="#about">
+      <a href="#about" aria-label="About section">
         <UserIcon />
         <span class="title">About me</span>
       </a>
     </li>
     <li class="skills">
-      <a href="#skills">
+      <a href="#skills" aria-label="Skills section">
         <WrenchIcon />
         <span class="title">My skills</span>
       </a>
     </li>
     <li class="portfolio">
-      <a href="#portfolio">
+      <a href="#portfolio" aria-label="Portfolio section">
         <BriefcaseIcon />
         <span class="title">My portfolio</span>
       </a>
     </li>
     <li class="contact">
-      <a href="#contact">
+      <a href="#contact" aria-label="Contact section">
         <EnvelopeIcon />
         <span class="title">Contact me</span>
       </a>
@@ -86,7 +86,7 @@
       <div class="line-divisor"></div>
     </li>
     <li>
-      <a on:click={setTheme}>
+      <a on:click={setTheme} aria-label="Change theme">
         {#if isDarkTheme}
         <SunIcon />
         <span class="title">Light theme</span>
