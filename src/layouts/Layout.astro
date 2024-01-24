@@ -4,11 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const fontRedressed = 'https://fonts.googleapis.com/css2?family='
-	+ 'Redressed&family=Yellowtail&display=swap';
-const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
-	+ 'Redressed&family=Space+Grotesk:wght@300;400;500;600;700&family='
-	+ 'Yellowtail&display=swap';
 ---
 
 <!doctype html>
@@ -18,8 +13,6 @@ const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.ico" />
-		<link href={fontRedressed} rel="stylesheet">
-		<link href={fontSpaceGrotesk} rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
@@ -103,7 +96,7 @@ const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
 
 	html {
 		scroll-behavior: smooth;
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "Space Grotesk", system-ui, sans-serif;
 	}
 
 	button,
@@ -159,6 +152,55 @@ const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
 			font-size: 38px;
 		}
 	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Light.ttf');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Medium.ttf');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Bold.ttf');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Yellowtail';
+		src: url('/fonts/yellowtail/Yellowtail-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
 </style>
 
 <script>
