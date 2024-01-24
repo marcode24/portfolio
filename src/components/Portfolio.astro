@@ -11,7 +11,7 @@ import projects from '@data/projects.json';
     {
       projects.map((project) => (
         <div class="project">
-          <a href={project.urlProduction} target="_blank">
+          <a href={project.urlProduction} target="_blank" aria-label="project-preview">
             <picture>
               <img src={project.image} alt="project-preview" loading="lazy">
             </picture>
@@ -32,10 +32,20 @@ import projects from '@data/projects.json';
               }
             </div>
             <div class="links">
-              <a class="btn icon" target="_blank" href={project.urlGithub}>
+              <a
+                class="btn icon"
+                target="_blank"
+                href={project.urlGithub}
+                aria-label="github-repository"
+                >
                 Código <GithubIcon width={26} height={26}/>
               </a>
-              <a class="btn icon" target="_blank" href={project.urlProduction}>
+              <a
+                  class="btn icon"
+                  target="_blank"
+                  href={project.urlProduction}
+                  aria-label="project-demo"
+                >
                 Demo <ExternalIcon width={26} height={26} />
               </a>
             </div>
@@ -46,7 +56,12 @@ import projects from '@data/projects.json';
   </div>
 
   <div class="more">
-    <a href="https://github.com/marcode24?tab=repositories" target="_blank" class="btn">
+    <a
+      href="https://github.com/marcode24?tab=overview"
+      target="_blank"
+      class="btn"
+      aria-label="more-projects"
+      >
       Show more...
     </a>
   </div>

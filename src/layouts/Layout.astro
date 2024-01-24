@@ -4,23 +4,52 @@ interface Props {
 }
 
 const { title } = Astro.props;
-const fontRedressed = 'https://fonts.googleapis.com/css2?family='
-	+ 'Redressed&family=Yellowtail&display=swap';
-const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
-	+ 'Redressed&family=Space+Grotesk:wght@300;400;500;600;700&family='
-	+ 'Yellowtail&display=swap';
+
+const description = 'Explore my portfolio to see my projects and skills. '
+	+ 'I\'m a full-stack developer and I love to create websites and apps.';
+const keywords = 'portfolio, developer, web, app, full-stack, javascript, '
+	+ 'typescript, nodejs, express, mongodb, postgresql, mysql, rest, api, '
+	+ 'website, app, responsive, design, ui, ux, interface, user, experience, '
+	+ 'user interface, user experience, frontend, backend, fullstack, full-stack, '
+	+ 'full stack, developer, programmer, software, engineer, software engineer';
+const author = 'Marco Cruz';
+const language = 'en';
+const robots = 'index, follow';
+
+const og = {
+  title: 'Marco Cruz - Portfolio',
+  description: 'Explore my portfolio to see my projects and skills. '
+		+ 'I\'m a full-stack developer and I love to create websites and apps.',
+  url: 'https://marco-cruz.netlify.app/',
+  image: 'https://res.cloudinary.com/dfeujtobk/image/upload/v1705960644'
+		+ '/Portfolio/840shots_so_d3ber6.png',
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/logo.ico" />
-		<link href={fontRedressed} rel="stylesheet">
-		<link href={fontSpaceGrotesk} rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
+		<meta name="theme-color" content="#3b82f6" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="#3b82f6" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="author" content={author} />
+		<meta name="language" content={language} />
+		<meta name="robots" content={robots} />
+		<meta property="og:title" content={og.title} />
+		<meta property="og:description" content={og.description} />
+		<meta property="og:url" content={og.url} />
+		<meta property="og:image" content={og.image} />
+		<meta property="og:type" content="website" />
+		<meta name="twitter:title" content={og.title} />
+		<meta name="twitter:description" content={og.description} />
+		<meta name="twitter:url" content={og.url} />
+		<meta name="twitter:image" content={og.image} />
+		<meta name="twitter:card" content="summary_large_image" />
 		<title>{title}</title>
 	</head>
 	<body>
@@ -103,7 +132,7 @@ const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
 
 	html {
 		scroll-behavior: smooth;
-		font-family: "Space Grotesk", sans-serif;
+		font-family: "Space Grotesk", system-ui, sans-serif;
 	}
 
 	button,
@@ -160,6 +189,55 @@ const fontSpaceGrotesk = 'https://fonts.googleapis.com/css2?family='
 			font-size: 38px;
 		}
 	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Light.ttf');
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Medium.ttf');
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-SemiBold.ttf');
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Space Grotesk";
+		src: url('/fonts/space-grotesk/SpaceGrotesk-Bold.ttf');
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Yellowtail';
+		src: url('/fonts/yellowtail/Yellowtail-Regular.ttf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
 </style>
 
 <script>
