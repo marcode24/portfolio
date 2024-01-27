@@ -17,9 +17,9 @@
     "build-types": "tsc --noEmit --pretty"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/svelte": "^4.0.4",
-    "astro": "^3.5.5",
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/svelte": "^5.0.3",
+    "astro": "^4.2.6",
     "svelte": "4.2.7",
     "typescript": "5.2.2"
   },
