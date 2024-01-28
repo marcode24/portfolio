@@ -4,6 +4,7 @@
   "SEO_DESCRIPTION": "Explora mi portafolio para ver mis proyectos y habilidades. Soy un desarrollador full-stack y me encanta crear sitios web y aplicaciones.",
   "HERO_SECTION": {
     "TITLE": "¡Hola!",
+    "TITLE_NAV": "Inicio",
     "SUBTITLE_NORMAL": "Soy",
     "SUBTITLE_EMPHASIS": "Marco Cruz",
     "JOB_TITLE": "Desarrollador Frontend",
@@ -154,5 +155,9 @@
   },
   "FOOTER": {
     "DESCRIPTION": "Diseñado y Construido con ❤️ por"
+  },
+  "THEME": {
+    "DARK_THEME": "Tema oscuro",
+    "LIGHT_THEME": "Tema claro"
   }
 }

@@ -4,6 +4,7 @@
   "SEO_DESCRIPTION": "Explore my portfolio to see my projects and skills. I'm a full-stack developer and I love to create websites and apps.",
   "HERO_SECTION": {
     "TITLE": "Hello there!",
+    "TITLE_NAV": "Home",
     "SUBTITLE_NORMAL": "I'm",
     "SUBTITLE_EMPHASIS": "Marco Cruz",
     "JOB_TITLE": "Frontend Developer",
@@ -154,5 +155,9 @@
   },
   "FOOTER": {
     "DESCRIPTION": "Designed and Built with ❤️ by"
+  },
+  "THEME": {
+    "DARK_THEME": "Dark theme",
+    "LIGHT_THEME": "Light theme"
   }
 }

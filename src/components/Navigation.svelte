@@ -8,13 +8,31 @@
   import MoonIcon from '@components/icons/moon-icon.svelte';
   import { onMount } from 'svelte';
 
+  import { getI18n } from '@i18n/index';
+
   let current = '';
   let scrollY = 0;
   let darkThemeName = 'dark-theme'; // nombre de la clase para el tema oscuro
   let isDarkTheme = false; // indicador del estado del tema
+  let home, about, skills, portfolio, contact;
+  let theme = {
+    dark: 'dark-theme',
+    light: 'light-theme',
+  };
 
   onMount(() => {
     isDarkTheme = document.body.classList.contains(darkThemeName);
+    let language = document.documentElement.lang;
+    const i18n = getI18n({ currentLocale: language });
+    home = i18n.HERO_SECTION.TITLE_NAV;
+    about = i18n.ABOUT_SECTION.TITLE;
+    skills = i18n.SKILLS_SECTION.TITLE;
+    portfolio = i18n.PORTFOLIO_SECTION.TITLE;
+    contact = i18n.CONTACT_SECTION.TITLE;
+    theme = {
+      dark: i18n.THEME.DARK_THEME,
+      light: i18n.THEME.LIGHT_THEME,
+    };
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -54,31 +72,31 @@
     <li class="home active">
       <a href="#home" aria-label="Home section">
         <HomeIcon />
-        <span class="title">Home</span>
+        <span class="title"> {home} </span>
       </a>
     </li>
     <li class="about">
       <a href="#about" aria-label="About section">
         <UserIcon />
-        <span class="title">About me</span>
+        <span class="title">{about}</span>
       </a>
     </li>
     <li class="skills">
       <a href="#skills" aria-label="Skills section">
         <WrenchIcon />
-        <span class="title">My skills</span>
+        <span class="title">{skills}</span>
       </a>
     </li>
     <li class="portfolio">
       <a href="#portfolio" aria-label="Portfolio section">
         <BriefcaseIcon />
-        <span class="title">My portfolio</span>
+        <span class="title">{portfolio}</span>
       </a>
     </li>
     <li class="contact">
       <a href="#contact" aria-label="Contact section">
         <EnvelopeIcon />
-        <span class="title">Contact me</span>
+        <span class="title">{contact}</span>
       </a>
     </li>
     <li class="divisor">
@@ -89,10 +107,10 @@
       <a on:click={setTheme} aria-label="Change theme">
         {#if isDarkTheme}
         <SunIcon />
-        <span class="title">Light theme</span>
+        <span class="title">{theme.light}</span>
         {:else}
         <MoonIcon />
-        <span class="title">Dark theme</span>
+        <span class="title">{theme.dark}</span>
         {/if}
       </a>
     </li>
@@ -110,10 +128,6 @@
     box-shadow: 0px 0 20px 3px rgb(0 0 0 / 10%);
     z-index: 100;
     transform: translate(-50%, -50%);
-  }
-
-  nav ul.nav li a fa-icon {
-    font-size: 12px;
   }
 
   nav ul.nav {
