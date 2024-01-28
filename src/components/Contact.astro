@@ -12,14 +12,18 @@ import {
   LINKEDIN_URL,
   TWITTER_URL,
 } from '@constants/urls';
+import { getI18n } from '@i18n/index';
 
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
 ---
 
 <section id="contact">
-  <span class="title">Contact me ✉️</span>
+  <span class="title">{i18n.CONTACT_SECTION.TITLE} ✉️</span>
   <div class="container">
     <p class="description">
-      I’m currently looking for new opportunities, my inbox is always open!
+      {i18n.CONTACT_SECTION.DESCRIPTION}
     </p>
     <div class="email-wrapper">
       <div class="email">
@@ -52,7 +56,7 @@ import {
     </div>
     <div class="detail">
       <span class="text">
-        Design and Built with ❤️ by
+        {i18n.FOOTER.DESCRIPTION}
         <a target="_blank" href={GITHUB_URL} aria-label="Github profile">
           Marco Cruz
         </a>

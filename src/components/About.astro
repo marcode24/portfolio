@@ -1,29 +1,21 @@
 ---
-const YEARS_OLD = new Date().getFullYear() - 2001;
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
 ---
 
 <section id="about">
-  <span class="title">About me 👨</span>
+  <span class="title">{i18n.ABOUT_SECTION.TITLE} 👨</span>
   <div class="wrap">
     <div class="description">
-      <p>
-        My name is <span class="high">Marco Antonio Cruz Gabino</span>.
-        I am {YEARS_OLD} years old and I am currently studying computer science.
-        I am passionate about
-        <span class="high">writing code, solving problems and creating software</span>.
-        I am a responsible, self-taught, dynamic person with great capacity for teamwork.
-      </p>
-      <br>
-      <p>
-        Currently, I am expanding my skills into
-        <span class="high">backend development</span> to complement
-        my existing web development expertise
-      </p>
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_1}></p>
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_2}></p>
+      <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_3}></p>
     </div>
     <div class="image">
-      <figure>
-        <img src="programming.webp" alt="programming-image">
-      </figure>
+      <img src="programming.webp" alt={i18n.ABOUT_SECTION.IMAGE.ALT}>
     </div>
   </div>
 </section>
@@ -45,30 +37,24 @@ const YEARS_OLD = new Date().getFullYear() - 2001;
 
   .description {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: normal;
     line-height: 1.5;
-    color: var(--font-color-2);
+    color: var(--font-color-1);
+    text-wrap: pretty;
   }
 
-  .description .high {
-    color: var(--primary-color);
+  .description p {
+    margin-bottom: 1rem;
   }
 
   .image {
     flex: 1;
   }
 
-  section figure {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 20rem;
-    height: 19rem;
-  }
-
-  section figure img {
+  section img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 22rem;
+    height: 20rem;
     border-radius: 51% 49% 49% 51% / 49% 52% 48% 51%;
     border: 3px solid var(--primary-color);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
@@ -91,7 +77,7 @@ const YEARS_OLD = new Date().getFullYear() - 2001;
   }
 
   @media (max-width: 480px) {
-    section figure {
+    section img {
       width: 15rem;
       height: 14rem;
     }

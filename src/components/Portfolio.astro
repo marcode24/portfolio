@@ -1,11 +1,16 @@
 ---
 import ExternalIcon from '@components/icons/external-icon.astro';
 import GithubIcon from '@components/icons/github-icon.astro';
-import projects from '@data/projects.json';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
+const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
 ---
 
 <section id="portfolio">
-  <span class="title">My portfolio 💼</span>
+  <span class="title">{i18n.PORTFOLIO_SECTION.TITLE} 💼</span>
 
   <div class="projects">
     {
@@ -22,12 +27,10 @@ import projects from '@data/projects.json';
             <div class="technologies">
               {
                 project.technologies.map((technology) => (
-                  <figure>
-                    <img
-                      src={`images/${technology.image}`}
-                      alt={`${technology.name}-image`}
-                      loading="lazy">
-                  </figure>
+                  <img
+                    src={`images/${technology.image}`}
+                    alt={`${technology.name} tool used in the project`}
+                    loading="lazy">
                 ))
               }
             </div>
@@ -38,7 +41,7 @@ import projects from '@data/projects.json';
                 href={project.urlGithub}
                 aria-label="github-repository"
                 >
-                Código <GithubIcon width={26} height={26}/>
+                {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_GITHUB} <GithubIcon width={26} height={26}/>
               </a>
               <a
                   class="btn icon"
@@ -46,7 +49,8 @@ import projects from '@data/projects.json';
                   href={project.urlProduction}
                   aria-label="project-demo"
                 >
-                Demo <ExternalIcon width={26} height={26} />
+                {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_PRODUCTION}
+                <ExternalIcon width={26} height={26} />
               </a>
             </div>
           </div>
@@ -62,7 +66,7 @@ import projects from '@data/projects.json';
       class="btn"
       aria-label="more-projects"
       >
-      Show more...
+      {i18n.PORTFOLIO_SECTION.BUTTONS.BTN_MORE_PROJECTS}
     </a>
   </div>
 </section>
@@ -109,6 +113,12 @@ import projects from '@data/projects.json';
     transition: 0.3s ease;
   }
 
+  .description .technologies img {
+    width: 100%;
+    height: 2.1rem;
+    object-fit: cover;
+  }
+
   .project picture img:hover {
     transition: 0.3s ease;
   }
@@ -133,6 +143,7 @@ import projects from '@data/projects.json';
     font-size: 1.2rem;
     font-weight: 500;
     color: var(--font-color-2);
+    text-wrap: pretty;
   }
 
   .description .technologies {
@@ -141,16 +152,6 @@ import projects from '@data/projects.json';
     align-items: center;
     justify-content: flex-start;
     gap: 1rem;
-  }
-
-  .description .technologies figure {
-    height: 2.1rem;
-  }
-
-  .description .technologies figure img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
   }
 
   .description .links {
@@ -216,7 +217,7 @@ import projects from '@data/projects.json';
       gap: 0.5rem;
     }
 
-    .description .technologies figure {
+    .description .technologies img {
       height: 1.5rem;
     }
 

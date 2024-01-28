@@ -1,0 +1,158 @@
+{
+  "LANGUAGE": "es",
+  "SEO_TITLE": "Marco Cruz - Portfolio",
+  "SEO_DESCRIPTION": "Explora mi portafolio para ver mis proyectos y habilidades. Soy un desarrollador full-stack y me encanta crear sitios web y aplicaciones.",
+  "HERO_SECTION": {
+    "TITLE": "¡Hola!",
+    "SUBTITLE_NORMAL": "Soy",
+    "SUBTITLE_EMPHASIS": "Marco Cruz",
+    "JOB_TITLE": "Desarrollador Frontend",
+    "CV": {
+      "BTN_TEXT": "Descargar CV",
+      "FILENAME": "marco-cruz-cv-es.pdf",
+      "PATH": "pdf/marco-cruz-cv-es.pdf",
+      "ARIA_LABEL": "Descargar CV de Marco Cruz en español"
+    },
+    "IMAGE": {
+      "ALT": "Marco Cruz - Desarrollador Frontend"
+    }
+  },
+  "ABOUT_SECTION": {
+    "TITLE": "Sobre mí",
+    "DESCRIPTION_1": "Me llamo Marco Antonio Cruz Gabino, pero puedes llamarme Marco. Mi camino en la programación comenzó a la temprana edad de 16 años. Inicié mi viaje utilizando <strong>PSeInt como mi primer pseudolenguaje,</strong> una experiencia que sentó las bases de mi fascinación por la resolución de problemas y la lógica de programación.",
+    "DESCRIPTION_2": "Un hito significativo en mi trayectoria es la concepción y desarrollo de un sistema destinado a la búsqueda de herramientas de desarrollo, diseño y más. Esta iniciativa fue resultado de mi participación en la <strong>Hackathon del 'Día de la Programación'</strong> realizada en 2022, donde obtuve el honor de alcanzar la <strong>tercera posición.</strong>",
+    "DESCRIPTION_3": "Actualmente, me encuentro en la <strong>búsqueda de una oportunidad laboral como desarrollador frontend,</strong> donde pueda aplicar mis conocimientos y habilidades para crear soluciones que ayuden a las personas a resolver sus problemas.",
+    "IMAGE": {
+      "ALT": "Marco Cruz - Sobre mí"
+    }
+  },
+  "SKILLS_SECTION": {
+    "TITLE": "Habilidades",
+    "TITLES": {
+      "FRONTEND": "Frontend",
+      "BACKEND": "Backend",
+      "OTHERS": "Otras herramientas",
+      "LEARNING": "Aprendiendo"
+    }
+  },
+  "PORTFOLIO_SECTION": {
+    "TITLE": "Portafolio",
+    "BUTTONS": {
+      "BTN_GITHUB": "Código",
+      "BTN_PRODUCTION": "Demo",
+      "BTN_MORE_PROJECTS": "Ver más..."
+    },
+    "PROJECTS": [
+      {
+        "name": "Cloud Box",
+        "description": "Este es un servicio de almacenamiento en la nube que permite a los usuarios cargar y descargar archivos. Aquí también puedes crear carpetas y subcarpetas para organizar tus archivos.",
+        "image": "images/portfolio/cloud-box.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "NodeJs", "image": "nodejs.webp" },
+          { "name": "MongoDB", "image": "mongo.webp" },
+          { "name": "Docker", "image": "docker.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/cloudbox-frontend",
+        "urlProduction": "https://cloudbox-m.netlify.app/"
+      },
+      {
+        "name": "Info Reader",
+        "description": "Esta es una aplicación web que te permite leer noticias de tecnología utilizando fuentes RSS de diferentes fuentes y almacenándolas en una base de datos. También te permite crear una cuenta de usuario y guardar tus noticias favoritas",
+        "image": "images/portfolio/inforeader.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "NodeJs", "image": "nodejs.webp" },
+          { "name": "MongoDB", "image": "mongo.webp" },
+          { "name": "Docker", "image": "docker.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/InfoReader-App",
+        "urlProduction": "https://inforeader.netlify.app/"
+      },
+      {
+        "name": "Smart Dental",
+        "description": "Esta aplicación te permite gestionar una clínica dental, llevando un historial de los pacientes, gestionando las citas, el inventario, así como los empleados y pacientes.",
+        "image": "images/portfolio/smart-dental.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "NestJs", "image": "nestjs.webp" },
+          { "name": "MySQL", "image": "mysql.webp" },
+          { "name": "Docker", "image": "docker.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/smart-dental-frontend",
+        "urlProduction": "https://smart-dental.netlify.app/"
+      },
+      {
+        "name": "Bon Appetito App",
+        "description": "Aquí puedes comprar o construir tu propia pizza, seleccionar los ingredientes y el tamaño, y luego realizar tu pedido.",
+        "image": "images/portfolio/bon-appetito.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "TypeScript", "image": "ts.webp" },
+          { "name": "SASS", "image": "sass.webp" },
+          { "name": "HTML", "image": "html.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/bon-appetito",
+        "urlProduction": "https://bon-appetito.netlify.app/"
+      },
+      {
+        "name": "Guess Word Game",
+        "description": "Este es un juego en el que debes adivinar la respuesta a una pregunta. Dependiendo del nivel de dificultad, tendrás un número determinado de intentos para adivinar la respuesta. El juego termina cuando te quedas sin intentos o adivinas la respuesta correctamente.",
+        "image": "images/portfolio/guess-word.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "NodeJs", "image": "nodejs.webp" },
+          { "name": "SASS", "image": "sass.webp" },
+          { "name": "MongoDB", "image": "mongo.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/GuessWord-Game",
+        "urlProduction": "https://wordguess-game.netlify.app/"
+      },
+      {
+        "name": "Twitter Clone",
+        "description": "Este es un clon de la aplicación de Twitter que te permite crear una cuenta de usuario, publicar tweets, seguir a otros usuarios, dar me gusta a tweets, entre otras funciones.",
+        "image": "images/portfolio/twitter-clone.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "NodeJs", "image": "nodejs.webp" },
+          { "name": "SASS", "image": "sass.webp" },
+          { "name": "MongoDB", "image": "mongo.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/twitter-clone",
+        "urlProduction": "https://twitter-clone-challenge.netlify.app/"
+      },
+      {
+        "name": "Memory Game",
+        "description": "Este es un juego de memoria en el que debes encontrar los pares de cartas. Hay 3 niveles de dificultad: fácil, medio y difícil.",
+        "image": "images/portfolio/memory-game.webp",
+        "technologies": [
+          { "name": "HTML", "image": "html.webp" },
+          { "name": "CSS", "image": "css.webp" },
+          { "name": "JavaScript", "image": "js.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/memory-game",
+        "urlProduction": "https://marcode24.github.io/memory-game/"
+      },
+      {
+        "name": "Unit Converter",
+        "description": "Este es un conversor de unidades, te permite convertir de una unidad a otra en diversas categorías como longitud, peso, volumen, etc.",
+        "image": "images/portfolio/unit-converter.webp",
+        "technologies": [
+          { "name": "Angular", "image": "angular.webp" },
+          { "name": "TypeScript", "image": "ts.webp" },
+          { "name": "SASS", "image": "sass.webp" },
+          { "name": "HTML", "image": "html.webp" }
+        ],
+        "urlGithub": "https://github.com/marcode24/Unit-Converter",
+        "urlProduction": "https://unit-converter-site.netlify.app/"
+      }
+    ]
+  },
+  "CONTACT_SECTION": {
+    "TITLE": "Contáctame",
+    "DESCRIPTION": "Actualmente estoy buscando nuevas oportunidades, ¡mi correo electrónico siempre está abierto!"
+  },
+  "FOOTER": {
+    "DESCRIPTION": "Diseñado y Construido con ❤️ por"
+  }
+}

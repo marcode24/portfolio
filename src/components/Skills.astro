@@ -6,14 +6,19 @@ import {
   cardsDataLearning,
   cardsDataOthers,
 } from '@data/skills.json';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
 
 ---
 
 <section id="skills">
-  <span class="title">My skills 🛠️</span>
+  <span class="title">{i18n.SKILLS_SECTION.TITLE} 🛠️</span>
   <div class="skills">
     <div class="skill">
-      <span class="subtitle">Frontend</span>
+      <span class="subtitle">{i18n.SKILLS_SECTION.TITLES.FRONTEND}</span>
       <div class="cards">
         {
           cardsDataFrontend.map(({ name, imagePath, alt }) => (
@@ -23,7 +28,7 @@ import {
       </div>
     </div>
     <div class="skill">
-      <span class="subtitle">Backend</span>
+      <span class="subtitle">{i18n.SKILLS_SECTION.TITLES.BACKEND}</span>
       <div class="cards">
         {
           cardsDataBackend.map(({ name, imagePath, alt }) => (
@@ -33,7 +38,7 @@ import {
       </div>
     </div>
     <div class="skill">
-      <span class="subtitle">Other tools</span>
+      <span class="subtitle">{i18n.SKILLS_SECTION.TITLES.OTHERS}</span>
       <div class="cards">
         {
           cardsDataOthers.map(({ name, imagePath, alt }) => (
@@ -43,7 +48,7 @@ import {
       </div>
     </div>
     <div class="skill">
-      <span class="subtitle">Currently learning...</span>
+      <span class="subtitle">{i18n.SKILLS_SECTION.TITLES.LEARNING}</span>
       <div class="cards">
         {
           cardsDataLearning.map(({ name, imagePath, alt }) => (
