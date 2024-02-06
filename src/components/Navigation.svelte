@@ -75,10 +75,10 @@
         <span class="title"> {home} </span>
       </a>
     </li>
-    <li class="about">
-      <a href="#about" aria-label="About section">
-        <UserIcon />
-        <span class="title">{about}</span>
+    <li class="portfolio">
+      <a href="#portfolio" aria-label="Portfolio section">
+        <BriefcaseIcon />
+        <span class="title">{portfolio}</span>
       </a>
     </li>
     <li class="skills">
@@ -87,10 +87,10 @@
         <span class="title">{skills}</span>
       </a>
     </li>
-    <li class="portfolio">
-      <a href="#portfolio" aria-label="Portfolio section">
-        <BriefcaseIcon />
-        <span class="title">{portfolio}</span>
+    <li class="about">
+      <a href="#about" aria-label="About section">
+        <UserIcon />
+        <span class="title">{about}</span>
       </a>
     </li>
     <li class="contact">

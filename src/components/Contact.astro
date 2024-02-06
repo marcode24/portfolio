@@ -1,5 +1,6 @@
 ---
 import CopyIcon from '@components/icons/copy-icon.astro';
+import EnvelopeIcon from '@components/icons/envelope-icon.astro';
 import GithubIcon from '@components/icons/github-icon.astro';
 import InstagramIcon from '@components/icons/instagram-icon.astro';
 import LinkedinIcon from '@components/icons/linkedin-icon.astro';
@@ -20,7 +21,10 @@ const i18n = getI18n({ currentLocale });
 ---
 
 <section id="contact">
-  <span class="title">{i18n.CONTACT_SECTION.TITLE} ✉️</span>
+  <span class="title">
+    <EnvelopeIcon />
+    {i18n.CONTACT_SECTION.TITLE}
+  </span>
   <div class="container">
     <p class="description">
       {i18n.CONTACT_SECTION.DESCRIPTION}
@@ -87,7 +91,7 @@ const i18n = getI18n({ currentLocale });
     justify-content: center;
     flex-direction: column;
     gap: 2rem;
-    max-width: 50%;
+    max-width: 60%;
     margin: 6rem auto;
   }
 

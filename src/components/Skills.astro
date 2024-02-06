@@ -1,5 +1,6 @@
 ---
 import CardSkill from '@components/cards/CardSkill.astro';
+import WrenchIcon from '@components/icons/wrench-icon.astro';
 import {
   cardsDataBackend,
   cardsDataFrontend,
@@ -15,7 +16,10 @@ const i18n = getI18n({ currentLocale });
 ---
 
 <section id="skills">
-  <span class="title">{i18n.SKILLS_SECTION.TITLE} 🛠️</span>
+  <span class="title">
+    <WrenchIcon />
+    {i18n.SKILLS_SECTION.TITLE}
+  </span>
   <div class="skills">
     <div class="skill">
       <span class="subtitle">{i18n.SKILLS_SECTION.TITLES.FRONTEND}</span>
@@ -84,8 +88,8 @@ const i18n = getI18n({ currentLocale });
 
   .subtitle {
     font-size: 28px;
-    font-weight: bold;
-    color: var(--font-color);
+    font-weight: 600;
+    color: var(--primary-color);
   }
 
   .cards {
