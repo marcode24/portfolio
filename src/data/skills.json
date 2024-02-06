@@ -2,128 +2,128 @@
   "cardsDataFrontend": [
     {
       "name": "HTML",
-      "imagePath": "images/html.webp",
+      "imagePath": "/images/html.webp",
       "alt": "html"
     },
     {
       "name": "CSS 3",
-      "imagePath": "images/css.webp",
+      "imagePath": "/images/css.webp",
       "alt": "css"
     },
     {
       "name": "JavaScript",
-      "imagePath": "images/js.webp",
+      "imagePath": "/images/js.webp",
       "alt": "js"
     },
     {
       "name": "TypeScript",
-      "imagePath": "images/ts.webp",
+      "imagePath": "/images/ts.webp",
       "alt": "ts"
     },
     {
       "name": "Angular",
-      "imagePath": "images/angular.webp",
+      "imagePath": "/images/angular.webp",
       "alt": "angular"
     },
     {
       "name": "Astro",
-      "imagePath": "images/astro.webp",
+      "imagePath": "/images/astro.webp",
       "alt": "astro"
     },
     {
       "name": "Svelte",
-      "imagePath": "images/svelte.webp",
+      "imagePath": "/images/svelte.webp",
       "alt": "svelte"
     },
     {
       "name": "SASS",
-      "imagePath": "images/sass.webp",
+      "imagePath": "/images/sass.webp",
       "alt": "scss"
     },
     {
       "name": "Bootstrap",
-      "imagePath": "images/bootstrap.webp",
+      "imagePath": "/images/bootstrap.webp",
       "alt": "bootstrap"
     }
   ],
   "cardsDataBackend": [
     {
       "name": "Nodejs",
-      "imagePath": "images/nodejs.webp",
+      "imagePath": "/images/nodejs.webp",
       "alt": "nodejs"
     },
     {
       "name": "Nestjs",
-      "imagePath": "images/nestjs.webp",
+      "imagePath": "/images/nestjs.webp",
       "alt": "nestjs"
     },
     {
       "name": "MongoDB",
-      "imagePath": "images/mongo.webp",
+      "imagePath": "/images/mongo.webp",
       "alt": "mongodb"
     },
     {
       "name": "PostgreSql",
-      "imagePath": "images/postgresql.webp",
+      "imagePath": "/images/postgresql.webp",
       "alt": "postgresql"
     },
     {
       "name": "Sql Server",
-      "imagePath": "images/sqlserver.webp",
+      "imagePath": "/images/sqlserver.webp",
       "alt": "sqlserver"
     },
     {
       "name": "MySql",
-      "imagePath": "images/mysql.webp",
+      "imagePath": "/images/mysql.webp",
       "alt": "mysql"
     },
     {
       "name": "Docker",
-      "imagePath": "images/docker.webp",
+      "imagePath": "/images/docker.webp",
       "alt": "docker"
     }
   ],
   "cardsDataOthers": [
     {
       "name": "Git",
-      "imagePath": "images/git.webp",
+      "imagePath": "/images/git.webp",
       "alt": "git"
     },
     {
       "name": "Azure",
-      "imagePath": "images/azure.webp",
+      "imagePath": "/images/azure.webp",
       "alt": "azure"
     },
     {
       "name": "Figma",
-      "imagePath": "images/figma.webp",
+      "imagePath": "/images/figma.webp",
       "alt": "figma"
     },
     {
       "name": "Postman",
-      "imagePath": "images/postman.webp",
+      "imagePath": "/images/postman.webp",
       "alt": "postman"
     },
     {
       "name": "Jest",
-      "imagePath": "images/jest.webp",
+      "imagePath": "/images/jest.webp",
       "alt": "jest"
     },
     {
       "name": "Jasmine",
-      "imagePath": "images/jasmine.webp",
+      "imagePath": "/images/jasmine.webp",
       "alt": "jasmine"
     }
   ],
   "cardsDataLearning": [
     {
       "name": "Vue",
-      "imagePath": "images/vue.webp",
+      "imagePath": "/images/vue.webp",
       "alt": "vue"
     },
     {
       "name": "Tailwind",
-      "imagePath": "images/tailwind.webp",
+      "imagePath": "/images/tailwind.webp",
       "alt": "tailwind"
     }
   ]
