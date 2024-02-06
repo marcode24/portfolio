@@ -13,7 +13,7 @@
     "urlProduction": "https://cloudbox-m.netlify.app/"
   },
   {
-    "name": "InfoReader App",
+    "name": "Info Reader",
     "description": "This is a web application that allows you to read technology news, using RSS feeds from different sources and saving them in a database. It also allows you to create a user account and save your favorite news.",
     "image": "images/portfolio/inforeader.webp",
     "technologies": [

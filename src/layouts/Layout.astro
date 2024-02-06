@@ -1,25 +1,23 @@
 ---
 interface Props {
 	title: string;
+	description: string;
+	language: string;
 }
 
-const { title } = Astro.props;
+const { title, description, language } = Astro.props;
 
-const description = 'Explore my portfolio to see my projects and skills. '
-	+ 'I\'m a full-stack developer and I love to create websites and apps.';
 const keywords = 'portfolio, developer, web, app, full-stack, javascript, '
 	+ 'typescript, nodejs, express, mongodb, postgresql, mysql, rest, api, '
 	+ 'website, app, responsive, design, ui, ux, interface, user, experience, '
 	+ 'user interface, user experience, frontend, backend, fullstack, full-stack, '
 	+ 'full stack, developer, programmer, software, engineer, software engineer';
 const author = 'Marco Cruz';
-const language = 'en';
 const robots = 'index, follow';
 
 const og = {
-  title: 'Marco Cruz - Portfolio',
-  description: 'Explore my portfolio to see my projects and skills. '
-		+ 'I\'m a full-stack developer and I love to create websites and apps.',
+  title,
+  description,
   url: 'https://marco-cruz.netlify.app/',
   image: 'https://res.cloudinary.com/dfeujtobk/image/upload/v1705960644'
 		+ '/Portfolio/840shots_so_d3ber6.png',
@@ -27,7 +25,7 @@ const og = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={language}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -134,6 +132,11 @@ const og = {
 		scroll-behavior: smooth;
 		font-family: "Space Grotesk", system-ui, sans-serif;
 	}
+
+	p strong {
+    color: var(--primary-color);
+    font-weight: 600;
+  }
 
 	button,
 	button.btn,

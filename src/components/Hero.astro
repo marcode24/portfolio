@@ -2,20 +2,32 @@
 import GithubIcon from '@components/icons/github-icon.astro';
 import LinkedinIcon from '@components/icons/linkedin-icon.astro';
 import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
+import { getI18n } from '@i18n/index';
+
+const { currentLocale } = Astro;
+
+const i18n = getI18n({ currentLocale });
 ---
 
 <section class="home" id="home">
   <div class="main-title">
-    <h1 class="title">Hello there!<span>✌️</span></h1>
-    <h2 class="title">I'm <span class="subtitle-name">Marco Cruz</span></h2>
-    <span class="title-job">Frontend Developer</span>
+    <h1 class="title">{i18n.HERO_SECTION.TITLE}<span>✌️</span></h1>
+    <h2 class="title">
+      {i18n.HERO_SECTION.SUBTITLE_NORMAL}
+      <span class="subtitle-name">
+        {i18n.HERO_SECTION.SUBTITLE_EMPHASIS}
+      </span>
+    </h2>
+    <span class="title-job">
+      {i18n.HERO_SECTION.JOB_TITLE}
+    </span>
     <div class="bottom">
       <a
         class="btn"
         href="pdf/cv.pdf"
         download="cv - marco cruz.pdf"
-        aria-label="Download CV">
-        Download CV
+        aria-label={i18n.HERO_SECTION.CV.ARIA_LABEL}>
+        {i18n.HERO_SECTION.CV.BTN_TEXT}
       </a>
       <div class="social">
         <a target="_blank" href={GITHUB_URL} class="icon" aria-label="Github">
@@ -27,9 +39,8 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
       </div>
     </div>
   </div>
-  <figure>
-    <img src="me.webp" alt="profile-image" class="profile">
-  </figure>
+
+  <img src="me.webp" alt={i18n.HERO_SECTION.IMAGE.ALT} class="profile">
 </section>
 
 <style>
@@ -126,17 +137,10 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     color: var(--font-color-2);
   }
 
-  .home figure {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 30rem;
-    height: 28rem;
-  }
-
   img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 30rem;
+    height: 28rem;
     border-radius: 63% 37% 48% 52% / 60% 57% 43% 40%;
     border: 3px solid var(--primary-color);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
@@ -144,14 +148,14 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
   }
 
   @media (max-width: 1024px) {
-    .home figure {
+    img.profile {
       width: 28rem;
       height: 23rem;
     }
   }
 
   @media (max-width: 900px) {
-    .home figure {
+    img.profile {
       width: 28rem;
       height: 23rem;
     }
@@ -174,7 +178,8 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     span.title-job {
       font-size: 28px;
     }
-    .home figure {
+
+    img.profile {
       width: 18rem;
       height: 18rem;
     }
@@ -191,7 +196,8 @@ import { GITHUB_URL, LINKEDIN_URL } from '@constants/urls.ts';
     span.title-job {
       font-size: 28px;
     }
-    .home figure {
+
+    img.profile {
       width: 14rem;
       height: 14rem;
     }
