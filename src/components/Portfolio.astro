@@ -21,7 +21,7 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
       projects.map((project) => (
         <div class="project">
           <a href={project.urlProduction} target="_blank" aria-label="project-preview">
-            <picture>
+            <picture class="project-preview">
               <img src={`/${project.image}`} alt="project-preview" loading="lazy">
             </picture>
           </a>
@@ -31,10 +31,12 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
             <div class="technologies">
               {
                 project.technologies.map((technology) => (
-                  <img
-                    src={`/images/${technology.image}`}
-                    alt={`${technology.name} tool used in the project`}
-                    loading="lazy">
+                  <picture class="technology">
+                    <img
+                      src={`/images/${technology.image}`}
+                      alt={`${technology.name} tool used in the project`}
+                      loading="lazy">
+                  </picture>
                 ))
               }
             </div>
@@ -98,12 +100,18 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
     gap: 2rem;
   }
 
-  .project picture {
+  .description .technologies img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project picture.project-preview {
     border-radius: 1rem;
     overflow: hidden;
   }
 
-  .project picture img {
+  .project picture.project-preview img {
     min-height: inherit;
     width: 100%;
     height: 100%;
@@ -112,10 +120,10 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
     transition: 0.3s ease;
   }
 
-  .description .technologies img {
-    width: 100%;
+  .description .technologies .technology {
     height: 2.1rem;
-    object-fit: cover;
+    border-radius: 0.5rem;
+    overflow: hidden;
   }
 
   .project picture img:hover {
@@ -186,14 +194,18 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
       gap: 1.8rem;
     }
 
-    .project picture {
+    .description .technologies img {
+      height: 1.5rem;
+    }
+
+    .project picture.project-preview {
       width: 100%;
       height: 100%;
       margin-bottom: 1rem;
       border-radius: 0.8rem;
     }
 
-    .project picture img {
+    .project picture.project-preview img {
       transform: translate(0, 0);
     }
 
@@ -214,10 +226,6 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
       flex-direction: row;
       flex-wrap: wrap;
       gap: 0.5rem;
-    }
-
-    .description .technologies img {
-      height: 1.5rem;
     }
 
     .description .links {
