@@ -18,7 +18,7 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
         <div class="project">
           <a href={project.urlProduction} target="_blank" aria-label="project-preview">
             <picture>
-              <img src={project.image} alt="project-preview" loading="lazy">
+              <img src={`/${project.image}`} alt="project-preview" loading="lazy">
             </picture>
           </a>
           <div class="description">
@@ -28,7 +28,7 @@ const projects = i18n.PORTFOLIO_SECTION.PROJECTS;
               {
                 project.technologies.map((technology) => (
                   <img
-                    src={`images/${technology.image}`}
+                    src={`/images/${technology.image}`}
                     alt={`${technology.name} tool used in the project`}
                     loading="lazy">
                 ))
