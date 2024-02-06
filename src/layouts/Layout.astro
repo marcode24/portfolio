@@ -169,15 +169,18 @@ const og = {
 
 	section {
 		width: 100%;
-		padding: 2rem 0;
+		padding: 3rem 0;
 	}
 
 	section > .title {
-		font-weight: bold;
+		font-weight: 600;
 		font-size: 2.8rem;
-		margin: 1rem 0;
+		margin-bottom: 2.5rem;
 		align-self: flex-start;
-		color: var(--primary-color);
+		color: var(--font-color);
+		display: flex;
+		align-items: center;
+		gap: 2rem;
 	}
 
 	@media (max-width: 900px) {
@@ -190,6 +193,8 @@ const og = {
 	@media (max-width: 480px) {
 		section > .title {
 			font-size: 38px;
+			gap: 1rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 

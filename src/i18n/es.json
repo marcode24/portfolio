@@ -37,7 +37,7 @@
     }
   },
   "PORTFOLIO_SECTION": {
-    "TITLE": "Portafolio",
+    "TITLE": "Proyectos",
     "BUTTONS": {
       "BTN_GITHUB": "Código",
       "BTN_PRODUCTION": "Demo",

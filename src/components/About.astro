@@ -1,4 +1,5 @@
 ---
+import UserIcon from '@components/icons/user-icon.astro';
 import { getI18n } from '@i18n/index';
 
 const { currentLocale } = Astro;
@@ -7,7 +8,10 @@ const i18n = getI18n({ currentLocale });
 ---
 
 <section id="about">
-  <span class="title">{i18n.ABOUT_SECTION.TITLE} 👨</span>
+  <span class="title">
+    <UserIcon />
+    {i18n.ABOUT_SECTION.TITLE}
+  </span>
   <div class="wrap">
     <div class="description">
       <p set:html={i18n.ABOUT_SECTION.DESCRIPTION_1}></p>
