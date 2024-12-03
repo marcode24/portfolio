@@ -14,13 +14,14 @@
     "stylelint": "stylelint 'src/**/*.{css,scss,astro}'",
     "stylelint:fix": "stylelint 'src/**/*.{css,scss,astro}' --fix",
     "stylelint:watch": "stylelint 'src/**/*.{css,scss,astro}' --watch",
-    "build-types": "tsc --noEmit --pretty"
+    "build-types": "tsc --noEmit --pretty",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "@astrojs/check": "^0.4.1",
     "@astrojs/svelte": "^5.0.3",
     "astro": "^4.2.6",
-    "svelte": "4.2.7",
+    "svelte": "^4.2.19",
     "svelte-i18n": "^4.0.0",
     "typescript": "5.2.2"
   },
