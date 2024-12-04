@@ -1,24 +1,29 @@
 ---
-import About from '@components/About.astro';
 import ButtonTop from '@components/buttons/button-top.svelte';
-import Contact from '@components/Contact.astro';
 import Header from '@components/Header.astro';
-import Hero from '@components/Hero.astro';
 import Navigation from '@components/Navigation.svelte';
-import Portfolio from '@components/Portfolio.astro';
-import Skills from '@components/Skills.astro';
 import { getI18n } from '@i18n/index';
 import Layout from '@layouts/Layout.astro';
+
+import About from './About.astro';
+import Contact from './Contact.astro';
+import Hero from './Hero.astro';
+import Portfolio from './Portfolio.astro';
+import Skills from './Skills.astro';
 
 const { currentLocale } = Astro;
 
 const i18n = getI18n({ currentLocale });
 ---
 
-<Layout title={i18n.SEO_TITLE} description={i18n.SEO_DESCRIPTION} language={i18n.LANGUAGE}>
+<Layout
+  title={i18n.SEO_TITLE}
+  description={i18n.SEO_DESCRIPTION}
+  language={i18n.LANGUAGE}
+>
   <div class="wrapper">
     <Header />
-    <Navigation client:load/>
+    <Navigation client:load />
     <div class="content">
       <div class="blur bottom"></div>
       <div class="blur top"></div>
@@ -29,14 +34,17 @@ const i18n = getI18n({ currentLocale });
       <Contact />
     </div>
   </div>
-  <ButtonTop client:idle/>
+  <ButtonTop client:idle />
 </Layout>
 
 <style>
   .wrapper {
     opacity: 1;
     visibility: visible;
-    transition: opacity 2.2s ease-in-out, visibility 2.2s ease-in-out, height 2.2s ease-in-out;
+    transition:
+      opacity 2.2s ease-in-out,
+      visibility 2.2s ease-in-out,
+      height 2.2s ease-in-out;
     overflow: hidden;
     max-width: 1200px;
     min-width: 380px;

@@ -1,0 +1,135 @@
+---
+import EnglishFlag from '@components/icons/flags/english.astro';
+import SpanishFlag from '@components/icons/flags/spanish.astro';
+
+const LANGUAGES_SUPPORTED = [
+  {
+    id: 'es',
+    name: 'Español',
+    flag: SpanishFlag,
+  },
+  {
+    id: 'en',
+    name: 'English',
+    flag: EnglishFlag,
+  },
+];
+
+const path = Astro.url.pathname;
+const currentLocale = LANGUAGES_SUPPORTED.find(({ id }) => path.startsWith(`/${id}`))
+  || LANGUAGES_SUPPORTED[0];
+const LANGUAGES_FILTERED = LANGUAGES_SUPPORTED.filter(
+  ({ id }) => id !== currentLocale.id,
+);
+---
+
+<div class="custom-select">
+  <div class="select-selected">
+    <currentLocale.flag height={30} width={30} />
+  </div>
+  <div class="select-items">
+    {
+      LANGUAGES_FILTERED.map((lang) => (
+        <div class="language-option" data-lang-id={lang.id}>
+          <lang.flag height={20} width={20} />
+          {lang.name}
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .custom-select {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .select-selected {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease;
+    border-radius: 1rem;
+    gap: 0.5rem;
+  }
+
+  .select-selected:hover {
+    background-color: var(--bg-color-button-hover);
+  }
+
+  .select-items {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    min-width: 10rem;
+    right: 0;
+  }
+
+  .select-items div {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .select-items div:nth-child(1) {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .select-items div:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
+  .select-items div:hover {
+    background-color: var(--bg-color-button-hover);
+  }
+
+  .select-items:has(div:only-child) div {
+    border-radius: 1rem;
+  }
+
+  .custom-select.active .select-items {
+    display: block;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color-nav);
+    margin-top: 5px;
+  }
+</style>
+
+<script>
+  function changeLanguage(langId: string) {
+    const currentPath = window.location.pathname;
+    const hasLangPrefix = /^\/[a-z]{2}(\/|$)/.test(currentPath);
+
+    let newPath;
+    if (hasLangPrefix) {
+      newPath = currentPath.replace(/^\/[a-z]{2}/, `/${langId}`);
+    } else {
+      newPath = `/${langId}${currentPath}`;
+    }
+
+    window.location.pathname = newPath;
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const selectSelected = document.querySelector('.select-selected');
+    const languageOptions = document.querySelectorAll('.language-option');
+
+    languageOptions.forEach((option) => {
+      option.addEventListener('click', () => {
+        const langId = option.getAttribute('data-lang-id');
+        langId && changeLanguage(langId);
+      });
+    });
+
+    if (selectSelected) {
+      selectSelected.addEventListener('click', () => {
+        selectSelected.parentElement?.classList.toggle('active');
+      });
+    }
+  });
+</script>
